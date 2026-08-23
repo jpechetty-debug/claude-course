@@ -1,20 +1,27 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Claude Course Architect – Interactive Curriculum Dashboard
 
-# Run and deploy your AI Studio app
+A modern, interactive React + Vite web dashboard for exploring the **Claude Code Mastery** 60-day engineering curriculum.
 
-This contains everything you need to run your app locally.
+## Features
+- **Curriculum Audit & Gap Analysis**: Interactive 4D evaluation cards and 20 enterprise gap insights.
+- **60-Day Day-by-Day Syllabus**: Interactive accordion browser across all 8 modules and 60 lessons.
+- **Searchable 50 Hands-On Labs**: Filter by difficulty (`Beginner`, `Intermediate`, `Advanced`, `Expert`) or search by keyword with full step-by-step commands and pass criteria.
+- **Tiered 30 Capstone Portfolio**: Filter by tier with architecture ASCII flowcharts, features, and 100-point grading rubrics.
+- **LMS Blueprint & Career Pathways**: 7-part lesson production specs, 3-tier proctored certifications, and career playbooks.
 
-View your app in AI Studio: https://ai.studio/apps/8e73f371-f22c-4ed9-97ed-c5cce83da192
+## Running Locally
 
-## Run Locally
+**Prerequisites:** Node.js 18+
 
-**Prerequisites:**  Node.js
+```bash
+# Install dependencies
+npm install
 
+# Run Vite dev server
+npm run dev
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+# Build for production
+npm run build
+```
+
+Open `http://localhost:3000` to interact with the dashboard.
