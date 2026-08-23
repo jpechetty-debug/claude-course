@@ -1,3 +1,5 @@
+// AUTO-GENERATED FROM scripts/master_data.js - DO NOT EDIT DIRECTLY
+
 export interface LabItem {
   id: number;
   section: string;
@@ -49,35 +51,177 @@ export interface GapItem {
 }
 
 export const auditMetrics = [
-  { metric: 'Clarity', score: 9.0, max: 10, color: 'text-emerald-600', bg: 'bg-emerald-50' },
-  { metric: 'Depth', score: 8.5, max: 10, color: 'text-indigo-600', bg: 'bg-indigo-50' },
-  { metric: 'Engagement', score: 8.5, max: 10, color: 'text-amber-500', bg: 'bg-amber-50' },
-  { metric: 'Practicality', score: 9.5, max: 10, color: 'text-emerald-600', bg: 'bg-emerald-50' },
+  {
+    "metric": "Clarity",
+    "score": 9,
+    "max": 10,
+    "color": "text-emerald-600",
+    "bg": "bg-emerald-50"
+  },
+  {
+    "metric": "Depth",
+    "score": 8,
+    "max": 10,
+    "color": "text-indigo-600",
+    "bg": "bg-indigo-50"
+  },
+  {
+    "metric": "Engagement",
+    "score": 8,
+    "max": 10,
+    "color": "text-amber-500",
+    "bg": "bg-amber-50"
+  },
+  {
+    "metric": "Practicality",
+    "score": 10,
+    "max": 10,
+    "color": "text-emerald-600",
+    "bg": "bg-emerald-50"
+  }
 ];
-
 export const gapAnalysisList: GapItem[] = [
-  { id: 1, title: 'Building Custom MCP Servers (stdio & SSE)', whyItMatters: '90% of enterprise value comes from connecting Claude to internal databases and APIs.', placement: 'Week 4 (Module 5)', duration: '4.5 Hours' },
-  { id: 2, title: 'Deep Context Engineering & Prompt Caching', whyItMatters: 'Developers waste 60%+ of API budgets on cold cache misses and bloated history.', placement: 'Week 2 (Module 2)', duration: '3.0 Hours' },
-  { id: 3, title: 'Full-Scale Claude Agent SDK Applications', whyItMatters: 'AI engineers need to embed Claude’s agent loop into custom SaaS backends.', placement: 'Week 7 (Module 7)', duration: '6.0 Hours' },
-  { id: 4, title: 'Multi-Agent Swarm Architectures & Consensus', whyItMatters: 'Complex refactoring requires supervisor-worker topologies and parallel audits.', placement: 'Week 6 (Module 6)', duration: '4.5 Hours' },
-  { id: 5, title: 'Autonomous GitHub Actions CI/CD Bots', whyItMatters: 'Organizations require autonomous PR review and auto-bugfixing in CI pipelines.', placement: 'Week 7 (Module 7)', duration: '4.0 Hours' },
-  { id: 6, title: 'IDE Co-Existence (Cursor, VS Code & JetBrains)', whyItMatters: 'Top engineers pair terminal Claude Code with their primary editor for 10x speed.', placement: 'Week 1 (Module 1)', duration: '2.5 Hours' },
-  { id: 7, title: 'Large Monorepo Navigation & Code Graphs', whyItMatters: 'Real-world developers work in 1,000,000+ line repos requiring AST navigation.', placement: 'Week 3 (Module 3)', duration: '3.5 Hours' },
-  { id: 8, title: 'Enterprise Security, Managed Settings & DLP', whyItMatters: 'CTOs and Security teams require enterprise governance before approving org rollout.', placement: 'Week 8 (Module 8)', duration: '3.5 Hours' },
-  { id: 9, title: 'Multi-Cloud Provider Routing (Bedrock / Vertex AI)', whyItMatters: 'Regulated enterprises deploy Claude Code via AWS IAM and GCP Workload Identity.', placement: 'Week 7 (Module 7)', duration: '3.0 Hours' },
-  { id: 10, title: 'Automated Agent Evals & Regression Testing', whyItMatters: 'Quantitative proof that skills and system prompts do not degrade over time.', placement: 'Week 8 (Module 8)', duration: '3.5 Hours' },
-  { id: 11, title: 'Claude Code on the Web Cloud Sandboxes', whyItMatters: 'Asynchronous cloud agents execute long refactors while engineers sleep.', placement: 'Week 6 (Module 6)', duration: '2.5 Hours' },
-  { id: 12, title: 'Persistent Memory & Squad Knowledge Bases', whyItMatters: 'Agents must remember architecture decisions across developer checkouts.', placement: 'Week 2 (Module 2)', duration: '2.5 Hours' },
-  { id: 13, title: 'Rich JSON Hook Decisions & Slack Webhooks', whyItMatters: 'Enterprise hook pipelines require integration with corporate SIEMs and alerts.', placement: 'Week 3 (Module 3)', duration: '3.5 Hours' },
-  { id: 14, title: 'TDD & Automated Mutation Testing Loops', whyItMatters: 'TDD yields a 95%+ first-pass accuracy rate compared to speculative coding.', placement: 'Week 3 (Module 3)', duration: '3.0 Hours' },
-  { id: 15, title: 'Custom Output Styles & Developer Personas', whyItMatters: 'Different tasks require different communication density and validation rigor.', placement: 'Week 2 (Module 2)', duration: '2.0 Hours' },
-  { id: 16, title: 'Git Worktree Fleets & Concurrent Local Sessions', whyItMatters: 'Power users run 3 to 5 simultaneous Claude sessions in parallel branches.', placement: 'Week 6 (Module 6)', duration: '2.5 Hours' },
-  { id: 17, title: 'Security Auditing & OWASP SAST Bot Workflows', whyItMatters: 'Claude Code actively hardens codebases against injection and IDOR flaws.', placement: 'Week 6 (Module 6)', duration: '3.5 Hours' },
-  { id: 18, title: 'Token Economics, FinOps & Quota Attribution', whyItMatters: 'Engineering leaders must forecast and control Claude Code ROI across 50+ seats.', placement: 'Week 8 (Module 8)', duration: '2.5 Hours' },
-  { id: 19, title: 'Authoring & Monetizing Marketplace Plugins', whyItMatters: 'Unlocks monetization and career opportunities in the emerging AI tooling market.', placement: 'Week 4 (Module 4)', duration: '3.5 Hours' },
-  { id: 20, title: 'Production Portfolio Defense & Client Proposals', whyItMatters: 'Equips students to land $150k-$280k roles or $10k-$50k consulting clients.', placement: 'Week 8 (Module 8)', duration: '5.0 Hours' },
+  {
+    "id": 1,
+    "title": "Building Custom MCP Servers (stdio & SSE)",
+    "whyItMatters": "Enables connecting Claude to proprietary internal APIs, databases, and microservices.",
+    "placement": "Week 5 (Module 5)",
+    "duration": "4.5 Hours"
+  },
+  {
+    "id": 2,
+    "title": "Deep Context Engineering & Prompt Caching",
+    "whyItMatters": "Maximizes cache hit rates, saving 70%+ of API token costs on multi-turn sessions.",
+    "placement": "Week 2 (Module 2)",
+    "duration": "3.0 Hours"
+  },
+  {
+    "id": 3,
+    "title": "Full-Scale Claude Agent SDK Applications",
+    "whyItMatters": "Enables developers to embed Claude’s agent loop into custom SaaS and internal tools.",
+    "placement": "Week 7 (Module 7)",
+    "duration": "6.0 Hours"
+  },
+  {
+    "id": 4,
+    "title": "Multi-Agent Swarm Architectures & Consensus",
+    "whyItMatters": "Coordinates supervisor-worker pipelines for large refactoring tasks.",
+    "placement": "Week 6 (Module 6)",
+    "duration": "4.5 Hours"
+  },
+  {
+    "id": 5,
+    "title": "Autonomous GitHub Actions CI/CD Bots",
+    "whyItMatters": "Deploys autonomous PR review and auto-bugfixing bots in production pipelines.",
+    "placement": "Week 7 (Module 7)",
+    "duration": "4.0 Hours"
+  },
+  {
+    "id": 6,
+    "title": "IDE Co-Existence (Cursor, VS Code & JetBrains)",
+    "whyItMatters": "Teaches developers to pair terminal Claude Code with their primary editor for maximum speed.",
+    "placement": "Week 1 (Module 1)",
+    "duration": "2.5 Hours"
+  },
+  {
+    "id": 7,
+    "title": "Large Monorepo Navigation & Code Graphs",
+    "whyItMatters": "Teaches AST and symbol-based navigation in 1,000,000+ line repositories.",
+    "placement": "Week 3 (Module 3)",
+    "duration": "3.5 Hours"
+  },
+  {
+    "id": 8,
+    "title": "Enterprise Security, Managed Settings & DLP",
+    "whyItMatters": "Enables security teams to deploy organization-wide allow/ask/deny policies.",
+    "placement": "Week 8 (Module 8)",
+    "duration": "3.5 Hours"
+  },
+  {
+    "id": 9,
+    "title": "Multi-Cloud Provider Routing (Bedrock / Vertex AI)",
+    "whyItMatters": "Regulated enterprises deploy Claude Code via existing cloud IAM roles.",
+    "placement": "Week 7 (Module 7)",
+    "duration": "3.0 Hours"
+  },
+  {
+    "id": 10,
+    "title": "Automated Agent Evals & Regression Testing",
+    "whyItMatters": "Quantitatively benchmarks skills and system prompts against test datasets.",
+    "placement": "Week 8 (Module 8)",
+    "duration": "3.5 Hours"
+  },
+  {
+    "id": 11,
+    "title": "Claude Code on the Web Cloud Sandboxes",
+    "whyItMatters": "Dispatches asynchronous background refactoring tasks to hosted cloud sandboxes.",
+    "placement": "Week 6 (Module 6)",
+    "duration": "2.5 Hours"
+  },
+  {
+    "id": 12,
+    "title": "Persistent Memory & Squad Knowledge Bases",
+    "whyItMatters": "Keeps architectural decisions synchronized across squad checkouts.",
+    "placement": "Week 2 (Module 2)",
+    "duration": "2.5 Hours"
+  },
+  {
+    "id": 13,
+    "title": "Rich JSON Hook Decisions & Alert Webhooks",
+    "whyItMatters": "Integrates hook pipelines with corporate security alerting and ticketing.",
+    "placement": "Week 3 (Module 3)",
+    "duration": "3.5 Hours"
+  },
+  {
+    "id": 14,
+    "title": "TDD & Automated Mutation Testing Loops",
+    "whyItMatters": "Achieves high accuracy through strict Red-Green-Refactor cycles.",
+    "placement": "Week 3 (Module 3)",
+    "duration": "3.0 Hours"
+  },
+  {
+    "id": 15,
+    "title": "Custom Output Styles & Developer Personas",
+    "whyItMatters": "Adapts response communication density for different engineering roles.",
+    "placement": "Week 2 (Module 2)",
+    "duration": "2.0 Hours"
+  },
+  {
+    "id": 16,
+    "title": "Git Worktree Fleets & Concurrent Local Sessions",
+    "whyItMatters": "Enables running 3 to 5 simultaneous Claude Code sessions without file collisions.",
+    "placement": "Week 6 (Module 6)",
+    "duration": "2.5 Hours"
+  },
+  {
+    "id": 17,
+    "title": "Security Auditing & OWASP SAST Bot Workflows",
+    "whyItMatters": "Employs Claude Code to actively detect and remediate security vulnerabilities.",
+    "placement": "Week 6 (Module 6)",
+    "duration": "3.5 Hours"
+  },
+  {
+    "id": 18,
+    "title": "Token Economics, FinOps & Quota Attribution",
+    "whyItMatters": "Tracks and forecasts token spend and cache ROI across developer teams.",
+    "placement": "Week 8 (Module 8)",
+    "duration": "2.5 Hours"
+  },
+  {
+    "id": 19,
+    "title": "Authoring & Publishing Marketplace Plugins",
+    "whyItMatters": "Packages and distributes verified plugin bundles across organizations.",
+    "placement": "Week 4 (Module 4)",
+    "duration": "3.5 Hours"
+  },
+  {
+    "id": 20,
+    "title": "Production AI Engineering Portfolio Defense",
+    "whyItMatters": "Evaluates students against a 100-point rubric for production readiness.",
+    "placement": "Week 8 (Module 8)",
+    "duration": "5.0 Hours"
+  }
 ];
-
 export const courseNamesList = [
   "Claude Code Mastery: Zero to Production AI Engineer",
   "Anthropic Claude Code Architect: Enterprise Agentic Systems",
@@ -90,541 +234,2389 @@ export const courseNamesList = [
   "Claude Developer Masterclass: Context, Code & Cloud Sandboxes",
   "The Claude Code Certification Program: Building Production AI Workflows"
 ];
-
 export const masterPromise = "Transform from an AI-curious developer into a world-class AI Software Engineer capable of building, securing, automating, and deploying production-grade agentic systems, custom MCP servers, and enterprise CI/CD pipelines using Claude Code and the Agent SDK.";
-
-export const labs50Catalog: LabItem[] = Array.from({ length: 50 }, (_, i) => {
-  const id = i + 1;
-  let section = 'CLI Fundamentals & Steering';
-  let difficulty: 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert' = 'Beginner';
-  let difficultyColor = 'text-emerald-600 bg-emerald-50';
-
-  if (id > 10 && id <= 20) {
-    section = 'Context Engineering & Memory';
-    difficulty = 'Intermediate';
-    difficultyColor = 'text-indigo-600 bg-indigo-50';
-  } else if (id > 20 && id <= 28) {
-    section = 'Deterministic Hooks, Skills & Plugins';
-    difficulty = id > 25 ? 'Advanced' : 'Intermediate';
-    difficultyColor = id > 25 ? 'text-amber-600 bg-amber-50' : 'text-indigo-600 bg-indigo-50';
-  } else if (id > 28 && id <= 37) {
-    section = 'Model Context Protocol (MCP) Engineering';
-    difficulty = 'Advanced';
-    difficultyColor = 'text-amber-600 bg-amber-50';
-  } else if (id > 37 && id <= 44) {
-    section = 'Subagents, Parallel Swarms & Concurrency';
-    difficulty = id > 41 ? 'Expert' : 'Advanced';
-    difficultyColor = id > 41 ? 'text-rose-600 bg-rose-50' : 'text-amber-600 bg-amber-50';
-  } else if (id > 44) {
-    section = 'Headless CI/CD, Agent SDK & Enterprise Evals';
-    difficulty = 'Expert';
-    difficultyColor = 'text-rose-600 bg-rose-50';
-  }
-
-  const titles = [
-    "Terminal Hardening & Diagnostic Verification",
-    "Passive Codebase Deconstruction (Read-Only)",
-    "Zero-Risk Feature Planning in Plan Mode",
-    "Authoring High-Impact CLAUDE.md Steering Files",
-    "The Single-Field Validation Loop (Explore-Plan-Code-Verify)",
-    "Fast Interrupts & Checkpoint Rewind Drills (Esc / Esc Esc)",
-    "Permission Mode Cycling & Boundary Auditing",
-    "Shell Passthrough Execution with ! Prefix",
-    "Interactive Navigation & Prompt History Recall",
-    "Model Switching & Cost-Tier Matching (/model)",
-    "Real-Time Context Inspection with /context",
-    "Prompt Caching Maximization & Cache TTL Drills",
-    "Surgical File Pinning with @ vs Unbounded Globbing",
-    "Mid-Task In-Place Compaction with /compact",
-    "Session Segregation & Context Contamination Testing (/clear)",
-    "Squad Architecture Memory Configuration (.claude/memory/)",
-    "Thinking Token Ceiling & Effort Tuning (MAX_THINKING_TOKENS)",
-    "Authoring Custom Slash Commands with Frontmatter",
-    "Dynamic Slash Commands with $ARGUMENTS Injection",
-    "Crafting Reusable Output Styles & Developer Personas",
-    "Hook Lifecycle Event Logging (Pre/Post/Stop)",
-    "Hardening Secret Protection with PreToolUse Hooks",
-    "Format-on-Write & Instant Lint Auto-Fixing (PostToolUse)",
-    "JSON Decision Protocol & Webhook Alerting (Slack/Teams)",
-    "Authoring Auto-Activating Agent Skills (SKILL.md)",
-    "Progressive Disclosure in Multi-File Skills",
-    "Auditing & Sandboxing Marketplace Plugins",
-    "Packaging & Publishing Custom Enterprise Plugins",
-    "MCP Client Scoping & Tool Impact Profiling (.mcp.json)",
-    "Building a Python FastMCP Server from Scratch (stdio)",
-    "Building a TypeScript MCP Server with Zod Validation (stdio)",
-    "Implementing Dynamic MCP URI Resources (logs://, db://)",
-    "Remote MCP Server Deployment over HTTP/SSE with Auth",
-    "Interactive MCP Elicitation Workflows",
-    "MCP Server Debugging & Protocol Packet Sniffing (Inspector)",
-    "Multi-Server MCP Gateway & Aggregator",
-    "Disconnection Discipline & Context Reclamation",
-    "Authoring Read-Only Code Reviewer Subagent",
-    "Model Tiering in Subagent Pipelines (Haiku for Search, Opus for Logic)",
-    "Parallel Multi-Domain Review Swarm (Security + Perf + QA)",
-    "Supervisor-Worker Hierarchical Task Decomposition",
-    "Concurrent Multi-Branch Development with Git Worktrees",
-    "Cloud Sandbox Dispatch on Claude Code on the Web (& operator)",
-    "Bidirectional Session Teleportation (Terminal ↔ Web)",
-    "Headless Scripting & JSON Pipeline Automation (claude -p)",
-    "Deploying an Autonomous GitHub Actions PR Review Bot",
-    "Building a Custom Python Agent with the Claude Agent SDK",
-    "Interactive Human-in-the-Loop Web Dashboard for Agent SDK",
-    "Automated Skill Evals & Regression Testing Harness",
-    "FinOps Token Attribution & Real-Time Cost Dashboard"
-  ];
-
-  return {
-    id,
-    section,
-    title: titles[i] || `Production Lab ${id}`,
-    difficulty,
-    difficultyColor,
-    objective: `Master the practical engineering mechanics of ${titles[i]}.`,
-    inputs: `Cloned test repository, active Claude Code CLI, configuration files.`,
-    instructions: [
-      `Step 1: Initialize the lab environment and verify baseline configuration.`,
-      `Step 2: Execute target command/prompt sequence using recommended permission mode.`,
-      `Step 3: Verify outputs, check diffs, and inspect token metrics.`
+export const labs50Catalog: LabItem[] = [
+  {
+    "id": 1,
+    "section": "CLI Fundamentals & Steering",
+    "title": "Terminal Hardening & Diagnostic Verification",
+    "difficulty": "Beginner",
+    "difficultyColor": "text-emerald-600 bg-emerald-50",
+    "objective": "Master terminal hardening & diagnostic verification in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 1: Terminal Hardening & Diagnostic Verification.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
     ],
-    expectedOutput: `Deterministic pass status with clean diff and verified assertion logs.`,
-    successCriteria: `All automated checks pass with zero unhandled errors or context leakage.`
-  };
-});
-
-export const capstones30Catalog: CapstoneItem[] = [
-  // Beginner (5)
-  {
-    id: "B1",
-    tier: "Beginner",
-    title: "Legacy CLI Tool Modernizer & Test Generator",
-    scope: "Modernize a legacy CLI tool to Python 3.12 / TypeScript ESM with 100% test coverage using Plan Mode.",
-    architecture: "Legacy Code ──► Plan Mode Deconstruction ──► Atomic ESM Refactor ──► Automated Pytest/Vitest",
-    features: ["Zero-regression CLI interface", "Type annotations", "95%+ branch coverage", "Updated CLAUDE.md"],
-    deliverables: ["Modernized repository", "Test suite", "Migration diff report"],
-    rubric: [{ category: "Code Quality", points: 30 }, { category: "Test Coverage", points: 30 }, { category: "CLI Compatibility", points: 20 }, { category: "Plan Discipline", points: 20 }]
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "B2",
-    tier: "Beginner",
-    title: "Full-Stack Documentation & API Specification Generator",
-    scope: "Analyze a 10,000-line codebase and generate complete OpenAPI 3.1 specs and Mermaid diagrams headlessly.",
-    architecture: "Backend Controllers ──► Claude -p Extraction ──► OpenAPI 3.1 YAML + Mermaid Architecture Map",
-    features: ["Automated endpoint discovery", "Interactive Mermaid sequence diagrams", "Developer onboarding guide"],
-    deliverables: ["openapi.yaml", "ARCHITECTURE.md", "Documentation website"],
-    rubric: [{ category: "Schema Accuracy", points: 35 }, { category: "Diagram Clarity", points: 25 }, { category: "Readme Quality", points: 20 }, { category: "Scripting", points: 20 }]
+    "id": 2,
+    "section": "CLI Fundamentals & Steering",
+    "title": "Read-Only Exploration & Architectural Mapping",
+    "difficulty": "Beginner",
+    "difficultyColor": "text-emerald-600 bg-emerald-50",
+    "objective": "Master read-only exploration & architectural mapping in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 2: Read-Only Exploration & Architectural Mapping.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "B3",
-    tier: "Beginner",
-    title: "Monorepo Code Smell & Technical Debt Auditor",
-    scope: "Build a headless CLI tool that scans a multi-package repo for dead code, circular dependencies, and security smells.",
-    architecture: "Monorepo Root ──► AST Static Analysis ──► Claude Severity Classifier ──► Structured Debt Matrix",
-    features: ["Orphaned export detection", "Circular dependency mapping", "Prioritized refactoring backlog"],
-    deliverables: ["Audit script", "TECH_DEBT_REPORT.md", "GitHub issue backlog"],
-    rubric: [{ category: "Detection Precision", points: 35 }, { category: "Remediation Value", points: 25 }, { category: "JSON Parsing", points: 20 }, { category: "Token Efficiency", points: 20 }]
+    "id": 3,
+    "section": "CLI Fundamentals & Steering",
+    "title": "Plan Mode Navigation & Shift+Tab Perm State Machine",
+    "difficulty": "Beginner",
+    "difficultyColor": "text-emerald-600 bg-emerald-50",
+    "objective": "Master plan mode navigation & shift+tab perm state machine in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 3: Plan Mode Navigation & Shift+Tab Perm State Machine.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "B4",
-    tier: "Beginner",
-    title: "Automated Git Commit & Release Note Pipeline",
-    scope: "Create terminal tools that analyze uncommitted git diffs, generate Conventional Commits, and compile changelogs.",
-    architecture: "git diff HEAD ──► Unix Pipe ──► Claude -p Conventional Commit Engine ──► Semantic Release Tag",
-    features: ["Conventional commit enforcement", "Semantic version recommendation", "Grouped markdown changelog"],
-    deliverables: ["Shell scripts", ".claude/commands/pr-release.md", "Documentation"],
-    rubric: [{ category: "Commit Accuracy", points: 30 }, { category: "Changelog Depth", points: 30 }, { category: "Ergonomics", points: 20 }, { category: "Token Efficiency", points: 20 }]
+    "id": 4,
+    "section": "CLI Fundamentals & Steering",
+    "title": "Authoring High-Impact 50-Line CLAUDE.md Steering Files",
+    "difficulty": "Beginner",
+    "difficultyColor": "text-emerald-600 bg-emerald-50",
+    "objective": "Master authoring high-impact 50-line claude.md steering files in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 4: Authoring High-Impact 50-Line CLAUDE.md Steering Files.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "B5",
-    tier: "Beginner",
-    title: "Config & Environment Drift Detector",
-    scope: "Cross-reference .env.example, Dockerfiles, and k8s manifests to detect missing keys and default secrets.",
-    architecture: ".env.example + Docker + k8s ──► Claude Comparison Engine ──► Drift Alert Matrix & Auto-Fix Template",
-    features: ["Missing environment key alerts", "Hardcoded secret flagging", "Auto-synchronized .env.template"],
-    deliverables: ["Audit CLI utility", "Drift matrix", "Remediation command"],
-    rubric: [{ category: "Drift Precision", points: 35 }, { category: "Security Alerting", points: 25 }, { category: "Auto-Fix", points: 20 }, { category: "Documentation", points: 20 }]
-  },
-
-  // Intermediate (10)
-  {
-    id: "I1",
-    tier: "Intermediate",
-    title: "Enterprise Deterministic Hook & Compliance Suite",
-    scope: "Build a cross-platform security and formatting hook suite preventing secret leaks and enforcing format-on-write.",
-    architecture: "Tool Call ──► PreToolUse Secret Guard (Bash/PowerShell) ──► PostToolUse Formatter ──► Stop Audit Log",
-    features: ["Regex secret blocking (.env, .pem, keys)", "Auto-format on write", "Structured JSON audit telemetry"],
-    deliverables: [".claude/settings.json", "Hook scripts", "Automated test suite"],
-    rubric: [{ category: "Secret Interception", points: 30 }, { category: "Cross-Platform", points: 25 }, { category: "Formatting", points: 25 }, { category: "Telemetry", points: 20 }]
+    "id": 5,
+    "section": "CLI Fundamentals & Steering",
+    "title": "Single-Field Atomic Bugfix & Diff Review Loop",
+    "difficulty": "Beginner",
+    "difficultyColor": "text-emerald-600 bg-emerald-50",
+    "objective": "Master single-field atomic bugfix & diff review loop in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 5: Single-Field Atomic Bugfix & Diff Review Loop.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "I2",
-    tier: "Intermediate",
-    title: "Production Full-Stack DevSecOps Plugin Suite",
-    scope: "Package and distribute a complete Claude Code plugin bundling skills, slash commands, subagents, and hooks.",
-    architecture: "Plugin Manifest (plugin.json) ──► Commands + Skills + Agents + Hooks ──► One-Command Installation",
-    features: ["Unified plugin distribution", "Auto-activating Docker skills", "Specialized security reviewer subagent"],
-    deliverables: ["Packaged plugin repository", "Install script", "End-to-end demo"],
-    rubric: [{ category: "Spec Compliance", points: 30 }, { category: "Component Depth", points: 30 }, { category: "Install Flow", points: 20 }, { category: "Documentation", points: 20 }]
+    "id": 6,
+    "section": "CLI Fundamentals & Steering",
+    "title": "Fast Interruption (Esc) & Direction Recovery",
+    "difficulty": "Beginner",
+    "difficultyColor": "text-emerald-600 bg-emerald-50",
+    "objective": "Master fast interruption (esc) & direction recovery in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 6: Fast Interruption (Esc) & Direction Recovery.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "I3",
-    tier: "Intermediate",
-    title: "Smart Database Migration & Index Optimization Assistant",
-    scope: "Analyze SQL/Prisma schemas, suggest indexing strategies, and draft zero-downtime expand/contract migrations.",
-    architecture: "Prisma/SQL Schema ──► Index Profiler Skill ──► Query Plan Analyzer ──► Safe Multi-Stage Migration",
-    features: ["Missing FK index detection", "Zero-downtime expand/contract patterns", "PostgreSQL query plan tuning"],
-    deliverables: [".claude/skills/db-migrate/", "Helper Python scripts", "Migration test suite"],
-    rubric: [{ category: "Index Quality", points: 30 }, { category: "Migration Safety", points: 30 }, { category: "Skill Design", points: 20 }, { category: "Test Rigor", points: 20 }]
+    "id": 7,
+    "section": "CLI Fundamentals & Steering",
+    "title": "Terminal Co-Existence with IDEs & tmux Panes",
+    "difficulty": "Beginner",
+    "difficultyColor": "text-emerald-600 bg-emerald-50",
+    "objective": "Master terminal co-existence with ides & tmux panes in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 7: Terminal Co-Existence with IDEs & tmux Panes.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "I4",
-    tier: "Intermediate",
-    title: "Autonomous Next.js / React Refactoring Engine",
-    scope: "Refactor legacy React class components to React Server Components (RSC) with Playwright E2E verification.",
-    architecture: "Legacy React ──► RSC Skill ──► Server/Client Boundary Split ──► Playwright Test Verification",
-    features: ["Automatic 'use client' boundary split", "Async server function data fetching", "Zero hydration error rate"],
-    deliverables: ["Refactoring slash commands", "React skill", "E2E test suite"],
-    rubric: [{ category: "RSC Separation", points: 35 }, { category: "Modern Data Flow", points: 25 }, { category: "Test Pass Rate", points: 20 }, { category: "Zero Hydration Errors", points: 20 }]
+    "id": 8,
+    "section": "CLI Fundamentals & Steering",
+    "title": "Hierarchical Rule Resolution & Subdirectory Steering",
+    "difficulty": "Beginner",
+    "difficultyColor": "text-emerald-600 bg-emerald-50",
+    "objective": "Master hierarchical rule resolution & subdirectory steering in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 8: Hierarchical Rule Resolution & Subdirectory Steering.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "I5",
-    tier: "Intermediate",
-    title: "API Error Standardization & Telemetry Instrumenter",
-    scope: "Instrument backend route handlers with RFC 7807 problem details and OpenTelemetry distributed trace spans.",
-    architecture: "Route Handlers ──► Standardization Skill ──► RFC 7807 Error Envelopes + OpenTelemetry Spans",
-    features: ["Stack trace leakage elimination", "RFC 7807 error envelopes", "Automatic trace context propagation"],
-    deliverables: ["Standardization skill", "Error middleware", "Integration test suite"],
-    rubric: [{ category: "RFC 7807 Compliance", points: 35 }, { category: "Telemetry Traces", points: 25 }, { category: "Security", points: 20 }, { category: "Tests", points: 20 }]
+    "id": 9,
+    "section": "CLI Fundamentals & Steering",
+    "title": "CLI Permission Rings: Allow, Ask, and Deny Rules",
+    "difficulty": "Beginner",
+    "difficultyColor": "text-emerald-600 bg-emerald-50",
+    "objective": "Master cli permission rings: allow, ask, and deny rules in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 9: CLI Permission Rings: Allow, Ask, and Deny Rules.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "I6",
-    tier: "Intermediate",
-    title: "Automated OpenAPI 3.1 & SDK Generator Skill",
-    scope: "Extract models and routes from backend code to produce OpenAPI 3.1 specs and compile TypeScript/Python SDKs.",
-    architecture: "Backend Code ──► Extraction Skill ──► OpenAPI 3.1 YAML ──► TypeScript & Python SDK Packages",
-    features: ["Automated route extraction", "OpenAPI 3.1 YAML generation", "Multi-language typed client SDKs"],
-    deliverables: [".claude/skills/sdk-builder/", "SDK code generator", "Sample client apps"],
-    rubric: [{ category: "Spec Validity", points: 35 }, { category: "SDK Type Quality", points: 25 }, { category: "Skill Design", points: 20 }, { category: "Client Tests", points: 20 }]
+    "id": 10,
+    "section": "CLI Fundamentals & Steering",
+    "title": "Headless One-Shot Prompts with claude -p Pipelines",
+    "difficulty": "Beginner",
+    "difficultyColor": "text-emerald-600 bg-emerald-50",
+    "objective": "Master headless one-shot prompts with claude -p pipelines in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 10: Headless One-Shot Prompts with claude -p Pipelines.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "I7",
-    tier: "Intermediate",
-    title: "Squad Architecture Memory & Knowledge Sharing System",
-    scope: "Sync git-committed Architectural Decision Records (ADRs) to .claude/memory/ across developer workstations.",
-    architecture: "ADR Markdown Files ──► Sync Utility ──► .claude/memory/ ──► Zero ADR Violations in Clean Sessions",
-    features: ["Bi-directional ADR memory sync", "Real-time ADR violation linting", "Automated ADR drafting"],
-    deliverables: ["Memory sync CLI tool", "ADR template suite", "Verification tests"],
-    rubric: [{ category: "Sync Mechanism", points: 30 }, { category: "Rule Adherence", points: 30 }, { category: "Memory Indexing", points: 20 }, { category: "Documentation", points: 20 }]
+    "id": 11,
+    "section": "Context Engineering & Memory",
+    "title": "Context Gauge & Token Threshold Monitoring",
+    "difficulty": "Intermediate",
+    "difficultyColor": "text-blue-600 bg-blue-50",
+    "objective": "Master context gauge & token threshold monitoring in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 11: Context Gauge & Token Threshold Monitoring.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "I8",
-    tier: "Intermediate",
-    title: "Interactive PR Triage & Semantic Labeling Assistant",
-    scope: "Build a subagent workflow that triages PRs, calculates risk scores, and generates semantic GitHub labels.",
-    architecture: "PR Diff ──► Triage Subagent ──► Multi-Factor Risk Score ──► GitHub Semantic Labels & Summary",
-    features: ["Multi-factor risk scoring", "Semantic categorization", "Non-technical executive PR summaries"],
-    deliverables: ["/triage-pr command", "Subagent config", "GitHub integration script"],
-    rubric: [{ category: "Risk Scoring", points: 35 }, { category: "Labeling Precision", points: 25 }, { category: "Subagent Scoping", points: 20 }, { category: "Summary Clarity", points: 20 }]
+    "id": 12,
+    "section": "Context Engineering & Memory",
+    "title": "Dynamic File Context Pinning with @ Syntax",
+    "difficulty": "Intermediate",
+    "difficultyColor": "text-blue-600 bg-blue-50",
+    "objective": "Master dynamic file context pinning with @ syntax in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 12: Dynamic File Context Pinning with @ Syntax.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "I9",
-    tier: "Intermediate",
-    title: "Context-Aware Microservice Scaffolder",
-    scope: "Inspect an organization's existing repositories and scaffold a new, perfectly synchronized microservice skeleton.",
-    architecture: "Existing Repo Fleet ──► Pattern Extraction ──► Scaffolder Command ──► Synced Microservice Boilerplate",
-    features: ["Company standard logging & auth pattern matching", "Complete CI/CD & Docker boilerplate", "100% CLAUDE.md compliance"],
-    deliverables: ["/scaffold-service command", "Microservice template", "Validation test suite"],
-    rubric: [{ category: "Pattern Replication", points: 35 }, { category: "Completeness", points: 25 }, { category: "Execution Speed", points: 20 }, { category: "Test Pass Rate", points: 20 }]
+    "id": 13,
+    "section": "Context Engineering & Memory",
+    "title": "In-Place Context Compaction with /compact",
+    "difficulty": "Intermediate",
+    "difficultyColor": "text-blue-600 bg-blue-50",
+    "objective": "Master in-place context compaction with /compact in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 13: In-Place Context Compaction with /compact.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "I10",
-    tier: "Intermediate",
-    title: "TDD Mutation Testing Harness",
-    scope: "Implement strict Red-Green-Refactor cycles and run mutation testing to achieve >90% mutant kill rate.",
-    architecture: "Spec ──► Red (Failing Test) ──► Green (Minimal Code) ──► Refactor ──► Stryker/Mutmut Kill Verification",
-    features: ["Strict TDD enforcement", "Automated mutation testing", "Self-healing test generation loop"],
-    deliverables: ["/tdd command", "Mutation testing script", "Audited test suite"],
-    rubric: [{ category: "TDD Red-Green Flow", points: 35 }, { category: "Mutation Score (>90%)", points: 30 }, { category: "Code Quality", points: 20 }, { category: "Scripting", points: 15 }]
-  },
-
-  // Advanced (10)
-  {
-    id: "A1",
-    tier: "Advanced",
-    title: "Enterprise Internal Developer Platform MCP Server (TypeScript)",
-    scope: "Build a TypeScript MCP server connecting Claude Code to PostgreSQL, LaunchDarkly, and Kubernetes.",
-    architecture: "Claude Code CLI ──(stdio JSON-RPC)──► TypeScript MCP Server ──► PostgreSQL + LaunchDarkly + K8s Pods",
-    features: ["Sanitized SQL schema inspection", "Feature flag toggle verification", "K8s pod log streaming", "Zod validation"],
-    deliverables: ["TypeScript MCP server repo", ".mcp.json", "Docker container", "Integration test suite"],
-    rubric: [{ category: "Protocol & Zod", points: 30 }, { category: "Security & Scoping", points: 25 }, { category: "Multi-System Integration", points: 25 }, { category: "Performance", points: 20 }]
+    "id": 14,
+    "section": "Context Engineering & Memory",
+    "title": "Cache Optimization & Prompt Structure Organization",
+    "difficulty": "Intermediate",
+    "difficultyColor": "text-blue-600 bg-blue-50",
+    "objective": "Master cache optimization & prompt structure organization in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 14: Cache Optimization & Prompt Structure Organization.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "A2",
-    tier: "Advanced",
-    title: "Cloud Infrastructure Health & FinOps MCP Server (Python)",
-    scope: "Build a Python FastMCP server providing live AWS CloudWatch metrics, Cost Explorer spend, and Terraform state.",
-    architecture: "Claude Code CLI ──(stdio)──► Python FastMCP Server ──► AWS boto3 ──► Live Cost & Health Telemetry",
-    features: ["CloudWatch alarms and CPU/RAM metrics", "30-day spend by service", "Dynamic MCP resource aws://costs/today"],
-    deliverables: ["Python MCP package", "Setup script", "AWS least-privilege IAM guide", "Mock test suite"],
-    rubric: [{ category: "FastMCP Architecture", points: 30 }, { category: "FinOps Analytics", points: 25 }, { category: "IAM Security", points: 25 }, { category: "Test Resilience", points: 20 }]
+    "id": 15,
+    "section": "Context Engineering & Memory",
+    "title": "Persistent Squad Memory Systems",
+    "difficulty": "Intermediate",
+    "difficultyColor": "text-blue-600 bg-blue-50",
+    "objective": "Master persistent squad memory systems in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 15: Persistent Squad Memory Systems.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "A3",
-    tier: "Advanced",
-    title: "Multi-Agent Parallel Code Review Swarm",
-    scope: "Deploy 3 parallel subagents (Security, Performance, QA) to conduct concurrent multi-domain PR audits.",
-    architecture: "PR Git Diff ──► [Security Agent | Perf Agent | QA Agent in Parallel] ──► Synthesized Master Matrix",
-    features: ["Concurrent subagent execution", "Model tiering (Haiku parsing + Sonnet review)", "Synthesized risk matrix"],
-    deliverables: ["Subagent configs", "Parallel bash runner", "Synthesis prompt", "Demo screencast"],
-    rubric: [{ category: "Concurrency & Isolation", points: 30 }, { category: "Audit Accuracy", points: 30 }, { category: "Report Synthesis", points: 20 }, { category: "Cost Optimization", points: 20 }]
+    "id": 16,
+    "section": "Context Engineering & Memory",
+    "title": "Context Purging & Reset Strategies with /clear",
+    "difficulty": "Intermediate",
+    "difficultyColor": "text-blue-600 bg-blue-50",
+    "objective": "Master context purging & reset strategies with /clear in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 16: Context Purging & Reset Strategies with /clear.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "A4",
-    tier: "Advanced",
-    title: "Hierarchical Multi-Agent Monorepo Refactor Coordinator",
-    scope: "Architect a supervisor-worker agent system that decomposes and coordinates refactors across a 5-package monorepo.",
-    architecture: "Supervisor (Opus) ──► Worker Subagents (Core, API, Web) ──► Integration Verifier & Rollback",
-    features: ["Dependency-aware task breakdown", "Automated state checkpoints", "Automatic rollback on test failure"],
-    deliverables: ["Supervisor runner", "Worker configs", "Rollback handler", "Sample refactored monorepo"],
-    rubric: [{ category: "Task Decomposition", points: 30 }, { category: "Failure Recovery", points: 25 }, { category: "Monorepo Integrity", points: 25 }, { category: "Token Budgeting", points: 20 }]
+    "id": 17,
+    "section": "Context Engineering & Memory",
+    "title": "Token Cost Analysis & Model Tiering (/cost)",
+    "difficulty": "Intermediate",
+    "difficultyColor": "text-blue-600 bg-blue-50",
+    "objective": "Master token cost analysis & model tiering (/cost) in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 17: Token Cost Analysis & Model Tiering (/cost).",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "A5",
-    tier: "Advanced",
-    title: "Remote HTTP/SSE MCP Gateway with OAuth2 Authentication",
-    scope: "Deploy a remote MCP server over Server-Sent Events (SSE) hosted on cloud infrastructure with Bearer/OAuth2 auth.",
-    architecture: "Claude Code CLI ──(HTTPS/SSE + Bearer)──► Cloud MCP Gateway (Fly.io/AWS) ──► Internal Corporate APIs",
-    features: ["Bidirectional SSE message stream", "JWT token verification middleware", "Rate-limiting and IP allowlisting"],
-    deliverables: ["Cloud MCP Gateway repo", "Dockerfile", "Terraform script", "Connection guide"],
-    rubric: [{ category: "SSE Stability", points: 30 }, { category: "Auth Hardening", points: 30 }, { category: "Cloud IaC", points: 20 }, { category: "Documentation", points: 20 }]
+    "id": 18,
+    "section": "Context Engineering & Memory",
+    "title": "Dynamic Custom Output Styles & Personas",
+    "difficulty": "Intermediate",
+    "difficultyColor": "text-blue-600 bg-blue-50",
+    "objective": "Master dynamic custom output styles & personas in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 18: Dynamic Custom Output Styles & Personas.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "A6",
-    tier: "Advanced",
-    title: "Real-Time Log Ingestion & Error Anomaly Detection MCP",
-    scope: "Connect Claude Code to Datadog/Loki log streams to autonomously triage errors and correlate with source files.",
-    architecture: "Datadog/Loki Stream ──► Ingestion MCP Server ──► Claude Code CLI ──► Root-Cause Analysis & Codebase Patch",
-    features: ["Dynamic MCP resource logs://production/errors", "Stack trace search tool", "Automatic source correlation"],
-    deliverables: ["Log ingestion MCP server", "Stream simulator", "Incident triage demo"],
-    rubric: [{ category: "Streaming Performance", points: 30 }, { category: "Root-Cause Precision", points: 30 }, { category: "Resource Usability", points: 20 }, { category: "Error Handling", points: 20 }]
+    "id": 19,
+    "section": "Context Engineering & Memory",
+    "title": "AST Symbol Exploration in 100k+ Line Codebases",
+    "difficulty": "Intermediate",
+    "difficultyColor": "text-blue-600 bg-blue-50",
+    "objective": "Master ast symbol exploration in 100k+ line codebases in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 19: AST Symbol Exploration in 100k+ Line Codebases.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "A7",
-    tier: "Advanced",
-    title: "Autonomous Multi-Branch Git Worktree Fleet Engine",
-    scope: "Build a CLI orchestrator running 4 concurrent Claude Code sessions in isolated worktrees to resolve backlog tickets.",
-    architecture: "4 Backlog Tickets ──► claude-fleet Orchestrator ──► 4 Isolated Git Worktrees ──► Auto-Merge & PRs",
-    features: ["Automated worktree provisioning", "Concurrent headless (-p) management", "Conflict detection and clean merges"],
-    deliverables: ["claude-fleet CLI tool", "Process manager", "Multi-ticket demo"],
-    rubric: [{ category: "Worktree Concurrency", points: 35 }, { category: "Conflict Handling", points: 25 }, { category: "Fleet Monitoring", points: 20 }, { category: "CLI Ergonomics", points: 20 }]
+    "id": 20,
+    "section": "Context Engineering & Memory",
+    "title": "Context Economics: Subagent Delegation vs Monolithic Context",
+    "difficulty": "Intermediate",
+    "difficultyColor": "text-blue-600 bg-blue-50",
+    "objective": "Master context economics: subagent delegation vs monolithic context in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 20: Context Economics: Subagent Delegation vs Monolithic Context.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "A8",
-    tier: "Advanced",
-    title: "Cloud Sandbox (claude.ai/code) Background Task Runner",
-    scope: "Dispatch long-running refactoring tasks to hosted cloud sandboxes using '&' and teleport completed states locally.",
-    architecture: "Local CLI ──(& operator)──► Anthropic Cloud Sandbox ──► Async Tests ──► (/teleport) Local Terminal",
-    features: ["Asynchronous cloud dispatch", "Mobile/browser status monitoring", "Bidirectional session teleportation"],
-    deliverables: ["Workflow playbook", "Integration scripts", "Video walkthrough"],
-    rubric: [{ category: "Cloud Teleportation", points: 35 }, { category: "State Sync", points: 25 }, { category: "Velocity Metrics", points: 20 }, { category: "Documentation", points: 20 }]
+    "id": 21,
+    "section": "Deterministic Hooks, Skills & Plugins",
+    "title": "Custom Slash Commands with Dynamic $ARGUMENTS",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-amber-600 bg-amber-50",
+    "objective": "Master custom slash commands with dynamic $arguments in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 21: Custom Slash Commands with Dynamic $ARGUMENTS.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "A9",
-    tier: "Advanced",
-    title: "Autonomous Threat Modeling & OWASP SAST Remediation Bot",
-    scope: "Scan codebases for OWASP Top 10 vulnerabilities with Semgrep, execute STRIDE modeling, and author verified fixes.",
-    architecture: "Source Code ──► Semgrep SAST ──► Claude Security Agent ──► STRIDE Threat Model + Patch + Security Tests",
-    features: ["Semgrep JSON integration", "Automated SQLi/XSS/IDOR patches", "Security unit test generation"],
-    deliverables: ["Security subagent", "SAST runner script", "Vulnerability fix suite"],
-    rubric: [{ category: "Remediation Precision", points: 35 }, { category: "STRIDE Threat Model", points: 25 }, { category: "Security Unit Tests", points: 20 }, { category: "Zero Regressions", points: 20 }]
+    "id": 22,
+    "section": "Deterministic Hooks, Skills & Plugins",
+    "title": "Deterministic Security Gates with PreToolUse Hooks",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-amber-600 bg-amber-50",
+    "objective": "Master deterministic security gates with pretooluse hooks in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 22: Deterministic Security Gates with PreToolUse Hooks.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "A10",
-    tier: "Advanced",
-    title: "Enterprise Plugin Marketplace & Auto-Sync Server",
-    scope: "Build a central plugin distribution server that synchronizes approved skills, hooks, and subagents across 500+ seats.",
-    architecture: "Enterprise Central Registry ──► Auto-Sync Daemon ──► 500+ Developer Workstations (.claude/settings.json)",
-    features: ["Cryptographic plugin signing", "Auto-sync background daemon", "Admin version tracking dashboard"],
-    deliverables: ["Registry backend", "Sync daemon", "Admin dashboard", "Deployment guide"],
-    rubric: [{ category: "Distribution Security", points: 30 }, { category: "Sync Reliability", points: 25 }, { category: "Admin UI", points: 25 }, { category: "Documentation", points: 20 }]
-  },
-
-  // Expert (5 Flagships)
-  {
-    id: "E1",
-    tier: "Expert",
-    title: "Autonomous GitHub Actions PR Fix & Release Platform",
-    scope: "Build an enterprise CI/CD platform that reviews PRs, responds to @claude fix comments, and self-heals failing tests.",
-    architecture: "GitHub PR Event ──► Hardened Docker Runner ──► Claude -p Self-Healing Loop ──► Green Tests & Auto-PR",
-    features: ["Least-privilege token governance", "PreToolUse security sandboxing", "Self-healing test iteration loop", "Semantic release tagging"],
-    deliverables: [".github/workflows/ suite", "Hardened Docker runner", "Custom CI hooks", "Public demo repo"],
-    rubric: [{ category: "Autonomous Self-Healing", points: 30 }, { category: "Security Sandboxing", points: 25 }, { category: "GitHub Actions Quality", points: 25 }, { category: "Edge-Case Handling", points: 20 }]
+    "id": 23,
+    "section": "Deterministic Hooks, Skills & Plugins",
+    "title": "Format-on-Write Automation with PostToolUse Hooks",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-amber-600 bg-amber-50",
+    "objective": "Master format-on-write automation with posttooluse hooks in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 23: Format-on-Write Automation with PostToolUse Hooks.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "E2",
-    tier: "Expert",
-    title: "Full-Stack Agent SDK Application with Human-in-the-Loop Web UI",
-    scope: "Build a SaaS app running the Claude Agent SDK with live streaming thought traces and interactive tool approvals.",
-    architecture: "Next.js Web Frontend ◄──(WebSocket)──► Agent SDK Backend (query loop) ──► canUseTool Approval Callbacks",
-    features: ["Embedded Agent SDK query() loop", "Real-time streaming UI", "Human-in-the-loop approval pauses", "PostgreSQL session persistence"],
-    deliverables: ["Full-stack repository", "PostgreSQL schema", "WebSocket server", "Live cloud deployment"],
-    rubric: [{ category: "Agent SDK Integration", points: 30 }, { category: "Human-in-the-Loop UI", points: 25 }, { category: "Streaming UX", points: 25 }, { category: "State Persistence", points: 20 }]
+    "id": 24,
+    "section": "Deterministic Hooks, Skills & Plugins",
+    "title": "Cross-Platform Hook Development (Bash vs PowerShell)",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-amber-600 bg-amber-50",
+    "objective": "Master cross-platform hook development (bash vs powershell) in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 24: Cross-Platform Hook Development (Bash vs PowerShell).",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "E3",
-    tier: "Expert",
-    title: "Enterprise Multi-Cloud Agent Platform (AWS Bedrock & GCP Vertex AI)",
-    scope: "Deploy a multi-cloud agent service routing between Bedrock (IAM) and Vertex AI (Workload Identity) with zero data retention.",
-    architecture: "Enterprise API Consumer ──► Multi-Cloud Agent Router ──► [AWS Bedrock (PrivateLink) | GCP Vertex AI (PSC)]",
-    features: ["Multi-provider fallback", "IAM role & Workload Identity auth", "Private networking isolation", "SOC2/HIPAA compliance"],
-    deliverables: ["Terraform IaC modules", "Routing service", "Benchmark harness", "Architecture whitepaper"],
-    rubric: [{ category: "Multi-Cloud IAM", points: 30 }, { category: "Provider Fallback", points: 25 }, { category: "VPC Security", points: 25 }, { category: "Terraform IaC", points: 20 }]
+    "id": 25,
+    "section": "Deterministic Hooks, Skills & Plugins",
+    "title": "JSON Decision Protocols & Exit Code Standards",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-amber-600 bg-amber-50",
+    "objective": "Master json decision protocols & exit code standards in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 25: JSON Decision Protocols & Exit Code Standards.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "E4",
-    tier: "Expert",
-    title: "Automated Agent Evals & Regression Testing Framework",
-    scope: "Build an automated evaluation harness testing custom Claude skills and tool-calling precision across 100+ challenges.",
-    architecture: "100+ Task Benchmark ──► Distributed Headless Runner ──► Pass@1 & Drift Analytics ──► CI Merge Blocker Gate",
-    features: ["Pass@1 and tool precision scoring", "Semantic drift and regression alerts", "CI merge blocking on eval degradation", "Interactive HTML report"],
-    deliverables: ["Eval framework repo", "100-task benchmark dataset", "GitHub Actions eval gate", "Dashboard"],
-    rubric: [{ category: "Eval Methodology", points: 30 }, { category: "Dataset Quality", points: 25 }, { category: "CI Integration", points: 25 }, { category: "Reporting UI", points: 20 }]
+    "id": 26,
+    "section": "Deterministic Hooks, Skills & Plugins",
+    "title": "Authoring Auto-Activating Agent Skills",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-amber-600 bg-amber-50",
+    "objective": "Master authoring auto-activating agent skills in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 26: Authoring Auto-Activating Agent Skills.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   },
   {
-    id: "E5",
-    tier: "Expert",
-    title: "Enterprise Claude Code FinOps & Telemetry Dashboard",
-    scope: "Develop an observability and governance platform tracking token spend, cache hit rates, and security violations across 500+ engineers.",
-    architecture: "500+ Workstations ──(OpenTelemetry Hooks)──► Telemetry Gateway ──► Prometheus + SIEM + Grafana Dashboard",
-    features: ["Automated OpenTelemetry hook instrumentation", "Squad-level cost allocation", "Security violation alerting", "ROI & cache savings metrics"],
-    deliverables: ["Telemetry ingestion service", "Grafana dashboards", "OpenTelemetry hook package", "Enterprise playbook"],
-    rubric: [{ category: "Telemetry Accuracy", points: 30 }, { category: "FinOps Modeling", points: 25 }, { category: "Security Governance", points: 25 }, { category: "Scalability", points: 20 }]
+    "id": 27,
+    "section": "Deterministic Hooks, Skills & Plugins",
+    "title": "Plugin Package Bundling & Manifest Authoring",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-amber-600 bg-amber-50",
+    "objective": "Master plugin package bundling & manifest authoring in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 27: Plugin Package Bundling & Manifest Authoring.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 28,
+    "section": "Deterministic Hooks, Skills & Plugins",
+    "title": "Auditing Untrusted Hooks & Plugin Sandboxing",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-amber-600 bg-amber-50",
+    "objective": "Master auditing untrusted hooks & plugin sandboxing in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 28: Auditing Untrusted Hooks & Plugin Sandboxing.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 29,
+    "section": "Model Context Protocol (MCP) Engineering",
+    "title": "Connecting SQLite Database MCP Server over stdio",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-purple-600 bg-purple-50",
+    "objective": "Master connecting sqlite database mcp server over stdio in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 29: Connecting SQLite Database MCP Server over stdio.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 30,
+    "section": "Model Context Protocol (MCP) Engineering",
+    "title": "Authoring Python FastMCP Server with Custom Tools",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-purple-600 bg-purple-50",
+    "objective": "Master authoring python fastmcp server with custom tools in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 30: Authoring Python FastMCP Server with Custom Tools.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 31,
+    "section": "Model Context Protocol (MCP) Engineering",
+    "title": "Authoring TypeScript MCP Server with Zod Schema Validation",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-purple-600 bg-purple-50",
+    "objective": "Master authoring typescript mcp server with zod schema validation in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 31: Authoring TypeScript MCP Server with Zod Schema Validation.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 32,
+    "section": "Model Context Protocol (MCP) Engineering",
+    "title": "MCP Transport Architectures: stdio vs HTTP/SSE",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-purple-600 bg-purple-50",
+    "objective": "Master mcp transport architectures: stdio vs http/sse in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 32: MCP Transport Architectures: stdio vs HTTP/SSE.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 33,
+    "section": "Model Context Protocol (MCP) Engineering",
+    "title": "MCP Scopes & Lifecycle Management in .mcp.json",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-purple-600 bg-purple-50",
+    "objective": "Master mcp scopes & lifecycle management in .mcp.json in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 33: MCP Scopes & Lifecycle Management in .mcp.json.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 34,
+    "section": "Model Context Protocol (MCP) Engineering",
+    "title": "Context Pruning for Active MCP Tool Declarations",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-purple-600 bg-purple-50",
+    "objective": "Master context pruning for active mcp tool declarations in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 34: Context Pruning for Active MCP Tool Declarations.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 35,
+    "section": "Model Context Protocol (MCP) Engineering",
+    "title": "Debugging MCP JSON-RPC Frames with MCP Inspector GUI",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-purple-600 bg-purple-50",
+    "objective": "Master debugging mcp json-rpc frames with mcp inspector gui in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 35: Debugging MCP JSON-RPC Frames with MCP Inspector GUI.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 36,
+    "section": "Model Context Protocol (MCP) Engineering",
+    "title": "Securing MCP Tool Invocations with PreToolUse Interceptors",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-purple-600 bg-purple-50",
+    "objective": "Master securing mcp tool invocations with pretooluse interceptors in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 36: Securing MCP Tool Invocations with PreToolUse Interceptors.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 37,
+    "section": "Model Context Protocol (MCP) Engineering",
+    "title": "Building an Internal Jira/GitHub Issue Triage MCP Server",
+    "difficulty": "Advanced",
+    "difficultyColor": "text-purple-600 bg-purple-50",
+    "objective": "Master building an internal jira/github issue triage mcp server in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 37: Building an Internal Jira/GitHub Issue Triage MCP Server.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 38,
+    "section": "Subagents, Parallel Swarms & Concurrency",
+    "title": "Context-Isolated Read-Only Code Review Subagent",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master context-isolated read-only code review subagent in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 38: Context-Isolated Read-Only Code Review Subagent.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 39,
+    "section": "Subagents, Parallel Swarms & Concurrency",
+    "title": "Autonomous Migration Worker Subagent in Worktree",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master autonomous migration worker subagent in worktree in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 39: Autonomous Migration Worker Subagent in Worktree.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 40,
+    "section": "Subagents, Parallel Swarms & Concurrency",
+    "title": "Multi-Agent Supervisor-Worker Swarm Architecture",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master multi-agent supervisor-worker swarm architecture in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 40: Multi-Agent Supervisor-Worker Swarm Architecture.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 41,
+    "section": "Subagents, Parallel Swarms & Concurrency",
+    "title": "Subagent Model Tiering: Haiku Routing & Sonnet Execution",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master subagent model tiering: haiku routing & sonnet execution in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 41: Subagent Model Tiering: Haiku Routing & Sonnet Execution.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 42,
+    "section": "Subagents, Parallel Swarms & Concurrency",
+    "title": "Git Worktree Fleet: Parallel Concurrent Claude Sessions",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master git worktree fleet: parallel concurrent claude sessions in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 42: Git Worktree Fleet: Parallel Concurrent Claude Sessions.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 43,
+    "section": "Subagents, Parallel Swarms & Concurrency",
+    "title": "Red-Team Security Auditor Subagent for Vulnerability Scans",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master red-team security auditor subagent for vulnerability scans in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 43: Red-Team Security Auditor Subagent for Vulnerability Scans.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 44,
+    "section": "Subagents, Parallel Swarms & Concurrency",
+    "title": "Asynchronous Cloud Sandbox Execution on claude.ai/code",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master asynchronous cloud sandbox execution on claude.ai/code in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 44: Asynchronous Cloud Sandbox Execution on claude.ai/code.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 45,
+    "section": "Headless CI/CD, Agent SDK & Enterprise Evals",
+    "title": "Headless Commit Message & PR Description Generator",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master headless commit message & pr description generator in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 45: Headless Commit Message & PR Description Generator.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 46,
+    "section": "Headless CI/CD, Agent SDK & Enterprise Evals",
+    "title": "Autonomous GitHub Actions PR Review Bot",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master autonomous github actions pr review bot in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 46: Autonomous GitHub Actions PR Review Bot.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 47,
+    "section": "Headless CI/CD, Agent SDK & Enterprise Evals",
+    "title": "Building Full-Stack Agent with Claude Agent SDK",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master building full-stack agent with claude agent sdk in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 47: Building Full-Stack Agent with Claude Agent SDK.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 48,
+    "section": "Headless CI/CD, Agent SDK & Enterprise Evals",
+    "title": "Multi-Cloud IAM Routing: AWS Bedrock & GCP Vertex AI",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master multi-cloud iam routing: aws bedrock & gcp vertex ai in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 48: Multi-Cloud IAM Routing: AWS Bedrock & GCP Vertex AI.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 49,
+    "section": "Headless CI/CD, Agent SDK & Enterprise Evals",
+    "title": "Automated Prompt Evals & Regression Testing Harness",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master automated prompt evals & regression testing harness in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 49: Automated Prompt Evals & Regression Testing Harness.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
+  },
+  {
+    "id": 50,
+    "section": "Headless CI/CD, Agent SDK & Enterprise Evals",
+    "title": "FinOps Cost Attribution Dashboard & Quota Governance",
+    "difficulty": "Expert",
+    "difficultyColor": "text-rose-600 bg-rose-50",
+    "objective": "Master finops cost attribution dashboard & quota governance in a production engineering repository.",
+    "inputs": "Target workspace repository, valid Node.js 18+ and Claude Code CLI.",
+    "instructions": [
+      "Initialize local workspace and launch Claude Code: claude",
+      "Execute the target drill for Lab 50: FinOps Cost Attribution Dashboard & Quota Governance.",
+      "Inspect diffs natively using !git diff and confirm zero collateral regressions.",
+      "Validate assertions with automated test suite."
+    ],
+    "expectedOutput": "Verified execution output with pass status code 0.",
+    "successCriteria": "Requirement fulfilled with passing test assertions."
   }
 ];
-
+export const capstones30Catalog: CapstoneItem[] = [
+  {
+    "id": "B1",
+    "tier": "Beginner",
+    "title": "Legacy Codebase Architecture Extractor",
+    "scope": "Automated architecture doc generator for legacy repositories.",
+    "architecture": "Repo -> AST / Symbols -> Claude Code -> ARCHITECTURE.md + Mermaid",
+    "features": [
+      "AST extraction",
+      "Mermaid generation",
+      "Zero-edit guarantee"
+    ],
+    "deliverables": [
+      "ARCHITECTURE.md",
+      "Mermaid diagram"
+    ],
+    "rubric": [
+      {
+        "category": "Accuracy",
+        "points": 40
+      },
+      {
+        "category": "Format",
+        "points": 30
+      },
+      {
+        "category": "Safety",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "B2",
+    "tier": "Beginner",
+    "title": "Interactive Bugfix Pipeline in Plan Mode",
+    "scope": "Zero-regression atomic bugfix pipeline using Plan Mode.",
+    "architecture": "Issue -> Plan Mode (Shift+Tab) -> Code -> Verify -> !git diff",
+    "features": [
+      "Plan generation",
+      "Atomic edit",
+      "Diff verification"
+    ],
+    "deliverables": [
+      "Pull Request",
+      "Test log"
+    ],
+    "rubric": [
+      {
+        "category": "Plan Quality",
+        "points": 35
+      },
+      {
+        "category": "Diff Cleanliness",
+        "points": 35
+      },
+      {
+        "category": "Tests",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "B3",
+    "tier": "Beginner",
+    "title": "Enterprise CLAUDE.md Steering System",
+    "scope": "50-line root steering file with hierarchical overrides.",
+    "architecture": "Root CLAUDE.md -> Subdirectory Rules -> /clear Verification",
+    "features": [
+      "50-line limit",
+      "Negative rules",
+      "Multi-package rules"
+    ],
+    "deliverables": [
+      "CLAUDE.md files",
+      "Verification log"
+    ],
+    "rubric": [
+      {
+        "category": "Conciseness",
+        "points": 40
+      },
+      {
+        "category": "Adherence",
+        "points": 40
+      },
+      {
+        "category": "Hierarchy",
+        "points": 20
+      }
+    ]
+  },
+  {
+    "id": "B4",
+    "tier": "Beginner",
+    "title": "Custom Engineering Slash Command Suite",
+    "scope": "Suite of 5 markdown commands with dynamic arguments.",
+    "architecture": ".claude/commands/*.md -> $ARGUMENTS -> Structured Outputs",
+    "features": [
+      "5 Commands",
+      "Input validation",
+      "Allowed-tools"
+    ],
+    "deliverables": [
+      ".claude/commands/",
+      "Demo video"
+    ],
+    "rubric": [
+      {
+        "category": "Command Design",
+        "points": 40
+      },
+      {
+        "category": "Security",
+        "points": 30
+      },
+      {
+        "category": "Utility",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "B5",
+    "tier": "Beginner",
+    "title": "Automated Git Hygiene & PR Script",
+    "scope": "Headless pipeline for clean commits and PR summaries.",
+    "architecture": "!git diff -> claude -p -> Conventional Commit + PR Body",
+    "features": [
+      "Conventional commits",
+      "Changelog generation",
+      "Headless -p"
+    ],
+    "deliverables": [
+      "Shell script",
+      "Sample PRs"
+    ],
+    "rubric": [
+      {
+        "category": "Automation",
+        "points": 40
+      },
+      {
+        "category": "Format",
+        "points": 30
+      },
+      {
+        "category": "Reliability",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "I1",
+    "tier": "Intermediate",
+    "title": "Deterministic Security Guardrail Hook Suite",
+    "scope": "Production intermediate capstone focusing on Deterministic Security Guardrail Hook Suite.",
+    "architecture": "Event / Trigger -> Interceptor / Subagent -> Test Suite -> Report",
+    "features": [
+      "Production error handling",
+      "Zero token waste",
+      "Automated tests"
+    ],
+    "deliverables": [
+      "Source repository",
+      "Architecture diagram",
+      "Verification log"
+    ],
+    "rubric": [
+      {
+        "category": "Architecture",
+        "points": 30
+      },
+      {
+        "category": "Implementation",
+        "points": 40
+      },
+      {
+        "category": "Verification",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "I2",
+    "tier": "Intermediate",
+    "title": "Automated Code Formatter & Linter Hook",
+    "scope": "Production intermediate capstone focusing on Automated Code Formatter & Linter Hook.",
+    "architecture": "Event / Trigger -> Interceptor / Subagent -> Test Suite -> Report",
+    "features": [
+      "Production error handling",
+      "Zero token waste",
+      "Automated tests"
+    ],
+    "deliverables": [
+      "Source repository",
+      "Architecture diagram",
+      "Verification log"
+    ],
+    "rubric": [
+      {
+        "category": "Architecture",
+        "points": 30
+      },
+      {
+        "category": "Implementation",
+        "points": 40
+      },
+      {
+        "category": "Verification",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "I3",
+    "tier": "Intermediate",
+    "title": "Persistent Squad Memory & Architectural Log",
+    "scope": "Production intermediate capstone focusing on Persistent Squad Memory & Architectural Log.",
+    "architecture": "Event / Trigger -> Interceptor / Subagent -> Test Suite -> Report",
+    "features": [
+      "Production error handling",
+      "Zero token waste",
+      "Automated tests"
+    ],
+    "deliverables": [
+      "Source repository",
+      "Architecture diagram",
+      "Verification log"
+    ],
+    "rubric": [
+      {
+        "category": "Architecture",
+        "points": 30
+      },
+      {
+        "category": "Implementation",
+        "points": 40
+      },
+      {
+        "category": "Verification",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "I4",
+    "tier": "Intermediate",
+    "title": "Dynamic Output Style Persona Engine",
+    "scope": "Production intermediate capstone focusing on Dynamic Output Style Persona Engine.",
+    "architecture": "Event / Trigger -> Interceptor / Subagent -> Test Suite -> Report",
+    "features": [
+      "Production error handling",
+      "Zero token waste",
+      "Automated tests"
+    ],
+    "deliverables": [
+      "Source repository",
+      "Architecture diagram",
+      "Verification log"
+    ],
+    "rubric": [
+      {
+        "category": "Architecture",
+        "points": 30
+      },
+      {
+        "category": "Implementation",
+        "points": 40
+      },
+      {
+        "category": "Verification",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "I5",
+    "tier": "Intermediate",
+    "title": "Python FastMCP SQLite Database Inspector",
+    "scope": "Production intermediate capstone focusing on Python FastMCP SQLite Database Inspector.",
+    "architecture": "Event / Trigger -> Interceptor / Subagent -> Test Suite -> Report",
+    "features": [
+      "Production error handling",
+      "Zero token waste",
+      "Automated tests"
+    ],
+    "deliverables": [
+      "Source repository",
+      "Architecture diagram",
+      "Verification log"
+    ],
+    "rubric": [
+      {
+        "category": "Architecture",
+        "points": 30
+      },
+      {
+        "category": "Implementation",
+        "points": 40
+      },
+      {
+        "category": "Verification",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "I6",
+    "tier": "Intermediate",
+    "title": "TypeScript MCP GitHub & Jira Issue Triager",
+    "scope": "Production intermediate capstone focusing on TypeScript MCP GitHub & Jira Issue Triager.",
+    "architecture": "Event / Trigger -> Interceptor / Subagent -> Test Suite -> Report",
+    "features": [
+      "Production error handling",
+      "Zero token waste",
+      "Automated tests"
+    ],
+    "deliverables": [
+      "Source repository",
+      "Architecture diagram",
+      "Verification log"
+    ],
+    "rubric": [
+      {
+        "category": "Architecture",
+        "points": 30
+      },
+      {
+        "category": "Implementation",
+        "points": 40
+      },
+      {
+        "category": "Verification",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "I7",
+    "tier": "Intermediate",
+    "title": "Context-Isolated Security Audit Subagent",
+    "scope": "Production intermediate capstone focusing on Context-Isolated Security Audit Subagent.",
+    "architecture": "Event / Trigger -> Interceptor / Subagent -> Test Suite -> Report",
+    "features": [
+      "Production error handling",
+      "Zero token waste",
+      "Automated tests"
+    ],
+    "deliverables": [
+      "Source repository",
+      "Architecture diagram",
+      "Verification log"
+    ],
+    "rubric": [
+      {
+        "category": "Architecture",
+        "points": 30
+      },
+      {
+        "category": "Implementation",
+        "points": 40
+      },
+      {
+        "category": "Verification",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "I8",
+    "tier": "Intermediate",
+    "title": "Test-Driven Development (TDD) Mutation Bot",
+    "scope": "Production intermediate capstone focusing on Test-Driven Development (TDD) Mutation Bot.",
+    "architecture": "Event / Trigger -> Interceptor / Subagent -> Test Suite -> Report",
+    "features": [
+      "Production error handling",
+      "Zero token waste",
+      "Automated tests"
+    ],
+    "deliverables": [
+      "Source repository",
+      "Architecture diagram",
+      "Verification log"
+    ],
+    "rubric": [
+      {
+        "category": "Architecture",
+        "points": 30
+      },
+      {
+        "category": "Implementation",
+        "points": 40
+      },
+      {
+        "category": "Verification",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "I9",
+    "tier": "Intermediate",
+    "title": "Monorepo AST Symbol Navigator",
+    "scope": "Production intermediate capstone focusing on Monorepo AST Symbol Navigator.",
+    "architecture": "Event / Trigger -> Interceptor / Subagent -> Test Suite -> Report",
+    "features": [
+      "Production error handling",
+      "Zero token waste",
+      "Automated tests"
+    ],
+    "deliverables": [
+      "Source repository",
+      "Architecture diagram",
+      "Verification log"
+    ],
+    "rubric": [
+      {
+        "category": "Architecture",
+        "points": 30
+      },
+      {
+        "category": "Implementation",
+        "points": 40
+      },
+      {
+        "category": "Verification",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "I10",
+    "tier": "Intermediate",
+    "title": "Context Budget & Cache ROI Analyzer",
+    "scope": "Production intermediate capstone focusing on Context Budget & Cache ROI Analyzer.",
+    "architecture": "Event / Trigger -> Interceptor / Subagent -> Test Suite -> Report",
+    "features": [
+      "Production error handling",
+      "Zero token waste",
+      "Automated tests"
+    ],
+    "deliverables": [
+      "Source repository",
+      "Architecture diagram",
+      "Verification log"
+    ],
+    "rubric": [
+      {
+        "category": "Architecture",
+        "points": 30
+      },
+      {
+        "category": "Implementation",
+        "points": 40
+      },
+      {
+        "category": "Verification",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "A1",
+    "tier": "Advanced",
+    "title": "Full-Stack MCP Gateway with HTTP/SSE & stdio",
+    "scope": "Advanced enterprise capstone implementing Full-Stack MCP Gateway with HTTP/SSE & stdio.",
+    "architecture": "Webhook / CI -> Parallel Swarm -> MCP Gateway -> Cloud Egress",
+    "features": [
+      "Distributed execution",
+      "Cloud IAM authentication",
+      "Automated regression testing"
+    ],
+    "deliverables": [
+      "Complete system repo",
+      "CI/CD Pipeline",
+      "Production benchmark report"
+    ],
+    "rubric": [
+      {
+        "category": "System Architecture",
+        "points": 30
+      },
+      {
+        "category": "Security & Robustness",
+        "points": 40
+      },
+      {
+        "category": "Evaluation Results",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "A2",
+    "tier": "Advanced",
+    "title": "Autonomous Migration Subagent Swarm in Worktrees",
+    "scope": "Advanced enterprise capstone implementing Autonomous Migration Subagent Swarm in Worktrees.",
+    "architecture": "Webhook / CI -> Parallel Swarm -> MCP Gateway -> Cloud Egress",
+    "features": [
+      "Distributed execution",
+      "Cloud IAM authentication",
+      "Automated regression testing"
+    ],
+    "deliverables": [
+      "Complete system repo",
+      "CI/CD Pipeline",
+      "Production benchmark report"
+    ],
+    "rubric": [
+      {
+        "category": "System Architecture",
+        "points": 30
+      },
+      {
+        "category": "Security & Robustness",
+        "points": 40
+      },
+      {
+        "category": "Evaluation Results",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "A3",
+    "tier": "Advanced",
+    "title": "Multi-Agent Consensus Review & Security Pipeline",
+    "scope": "Advanced enterprise capstone implementing Multi-Agent Consensus Review & Security Pipeline.",
+    "architecture": "Webhook / CI -> Parallel Swarm -> MCP Gateway -> Cloud Egress",
+    "features": [
+      "Distributed execution",
+      "Cloud IAM authentication",
+      "Automated regression testing"
+    ],
+    "deliverables": [
+      "Complete system repo",
+      "CI/CD Pipeline",
+      "Production benchmark report"
+    ],
+    "rubric": [
+      {
+        "category": "System Architecture",
+        "points": 30
+      },
+      {
+        "category": "Security & Robustness",
+        "points": 40
+      },
+      {
+        "category": "Evaluation Results",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "A4",
+    "tier": "Advanced",
+    "title": "Autonomous GitHub Actions CI/CD Auto-Fixer Bot",
+    "scope": "Advanced enterprise capstone implementing Autonomous GitHub Actions CI/CD Auto-Fixer Bot.",
+    "architecture": "Webhook / CI -> Parallel Swarm -> MCP Gateway -> Cloud Egress",
+    "features": [
+      "Distributed execution",
+      "Cloud IAM authentication",
+      "Automated regression testing"
+    ],
+    "deliverables": [
+      "Complete system repo",
+      "CI/CD Pipeline",
+      "Production benchmark report"
+    ],
+    "rubric": [
+      {
+        "category": "System Architecture",
+        "points": 30
+      },
+      {
+        "category": "Security & Robustness",
+        "points": 40
+      },
+      {
+        "category": "Evaluation Results",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "A5",
+    "tier": "Advanced",
+    "title": "Claude Agent SDK Incident Response Daemon",
+    "scope": "Advanced enterprise capstone implementing Claude Agent SDK Incident Response Daemon.",
+    "architecture": "Webhook / CI -> Parallel Swarm -> MCP Gateway -> Cloud Egress",
+    "features": [
+      "Distributed execution",
+      "Cloud IAM authentication",
+      "Automated regression testing"
+    ],
+    "deliverables": [
+      "Complete system repo",
+      "CI/CD Pipeline",
+      "Production benchmark report"
+    ],
+    "rubric": [
+      {
+        "category": "System Architecture",
+        "points": 30
+      },
+      {
+        "category": "Security & Robustness",
+        "points": 40
+      },
+      {
+        "category": "Evaluation Results",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "A6",
+    "tier": "Advanced",
+    "title": "Agent Evals & System Prompt Regression Harness",
+    "scope": "Advanced enterprise capstone implementing Agent Evals & System Prompt Regression Harness.",
+    "architecture": "Webhook / CI -> Parallel Swarm -> MCP Gateway -> Cloud Egress",
+    "features": [
+      "Distributed execution",
+      "Cloud IAM authentication",
+      "Automated regression testing"
+    ],
+    "deliverables": [
+      "Complete system repo",
+      "CI/CD Pipeline",
+      "Production benchmark report"
+    ],
+    "rubric": [
+      {
+        "category": "System Architecture",
+        "points": 30
+      },
+      {
+        "category": "Security & Robustness",
+        "points": 40
+      },
+      {
+        "category": "Evaluation Results",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "A7",
+    "tier": "Advanced",
+    "title": "Multi-Cloud IAM Router (AWS Bedrock & GCP Vertex)",
+    "scope": "Advanced enterprise capstone implementing Multi-Cloud IAM Router (AWS Bedrock & GCP Vertex).",
+    "architecture": "Webhook / CI -> Parallel Swarm -> MCP Gateway -> Cloud Egress",
+    "features": [
+      "Distributed execution",
+      "Cloud IAM authentication",
+      "Automated regression testing"
+    ],
+    "deliverables": [
+      "Complete system repo",
+      "CI/CD Pipeline",
+      "Production benchmark report"
+    ],
+    "rubric": [
+      {
+        "category": "System Architecture",
+        "points": 30
+      },
+      {
+        "category": "Security & Robustness",
+        "points": 40
+      },
+      {
+        "category": "Evaluation Results",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "A8",
+    "tier": "Advanced",
+    "title": "Enterprise Claude FinOps & Token Quota Gateway",
+    "scope": "Advanced enterprise capstone implementing Enterprise Claude FinOps & Token Quota Gateway.",
+    "architecture": "Webhook / CI -> Parallel Swarm -> MCP Gateway -> Cloud Egress",
+    "features": [
+      "Distributed execution",
+      "Cloud IAM authentication",
+      "Automated regression testing"
+    ],
+    "deliverables": [
+      "Complete system repo",
+      "CI/CD Pipeline",
+      "Production benchmark report"
+    ],
+    "rubric": [
+      {
+        "category": "System Architecture",
+        "points": 30
+      },
+      {
+        "category": "Security & Robustness",
+        "points": 40
+      },
+      {
+        "category": "Evaluation Results",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "A9",
+    "tier": "Advanced",
+    "title": "Agent Skill & Plugin Marketplace Package",
+    "scope": "Advanced enterprise capstone implementing Agent Skill & Plugin Marketplace Package.",
+    "architecture": "Webhook / CI -> Parallel Swarm -> MCP Gateway -> Cloud Egress",
+    "features": [
+      "Distributed execution",
+      "Cloud IAM authentication",
+      "Automated regression testing"
+    ],
+    "deliverables": [
+      "Complete system repo",
+      "CI/CD Pipeline",
+      "Production benchmark report"
+    ],
+    "rubric": [
+      {
+        "category": "System Architecture",
+        "points": 30
+      },
+      {
+        "category": "Security & Robustness",
+        "points": 40
+      },
+      {
+        "category": "Evaluation Results",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "A10",
+    "tier": "Advanced",
+    "title": "Automated OWASP SAST & Dependency Remediation Bot",
+    "scope": "Advanced enterprise capstone implementing Automated OWASP SAST & Dependency Remediation Bot.",
+    "architecture": "Webhook / CI -> Parallel Swarm -> MCP Gateway -> Cloud Egress",
+    "features": [
+      "Distributed execution",
+      "Cloud IAM authentication",
+      "Automated regression testing"
+    ],
+    "deliverables": [
+      "Complete system repo",
+      "CI/CD Pipeline",
+      "Production benchmark report"
+    ],
+    "rubric": [
+      {
+        "category": "System Architecture",
+        "points": 30
+      },
+      {
+        "category": "Security & Robustness",
+        "points": 40
+      },
+      {
+        "category": "Evaluation Results",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "E1",
+    "tier": "Expert",
+    "title": "Enterprise Autonomous Software Engineering Swarm",
+    "scope": "Flagship expert capstone delivering Enterprise Autonomous Software Engineering Swarm.",
+    "architecture": "Enterprise Monorepo -> Multi-Agent Swarm -> Agent SDK SaaS -> Cloud CI/CD",
+    "features": [
+      "End-to-end autonomy",
+      "Enterprise IAM & DLP",
+      "Live panel defense"
+    ],
+    "deliverables": [
+      "Production SaaS / Swarm",
+      "Live Defense Presentation",
+      "Comprehensive Documentation"
+    ],
+    "rubric": [
+      {
+        "category": "Architectural Rigor",
+        "points": 35
+      },
+      {
+        "category": "Production Readiness",
+        "points": 35
+      },
+      {
+        "category": "Defense Quality",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "E2",
+    "tier": "Expert",
+    "title": "Self-Healing CI/CD Pipeline with Mutation Gate",
+    "scope": "Flagship expert capstone delivering Self-Healing CI/CD Pipeline with Mutation Gate.",
+    "architecture": "Enterprise Monorepo -> Multi-Agent Swarm -> Agent SDK SaaS -> Cloud CI/CD",
+    "features": [
+      "End-to-end autonomy",
+      "Enterprise IAM & DLP",
+      "Live panel defense"
+    ],
+    "deliverables": [
+      "Production SaaS / Swarm",
+      "Live Defense Presentation",
+      "Comprehensive Documentation"
+    ],
+    "rubric": [
+      {
+        "category": "Architectural Rigor",
+        "points": 35
+      },
+      {
+        "category": "Production Readiness",
+        "points": 35
+      },
+      {
+        "category": "Defense Quality",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "E3",
+    "tier": "Expert",
+    "title": "Multi-Tenant Claude Agent SaaS Platform",
+    "scope": "Flagship expert capstone delivering Multi-Tenant Claude Agent SaaS Platform.",
+    "architecture": "Enterprise Monorepo -> Multi-Agent Swarm -> Agent SDK SaaS -> Cloud CI/CD",
+    "features": [
+      "End-to-end autonomy",
+      "Enterprise IAM & DLP",
+      "Live panel defense"
+    ],
+    "deliverables": [
+      "Production SaaS / Swarm",
+      "Live Defense Presentation",
+      "Comprehensive Documentation"
+    ],
+    "rubric": [
+      {
+        "category": "Architectural Rigor",
+        "points": 35
+      },
+      {
+        "category": "Production Readiness",
+        "points": 35
+      },
+      {
+        "category": "Defense Quality",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "E4",
+    "tier": "Expert",
+    "title": "Autonomous Vulnerability Remediation Appliance",
+    "scope": "Flagship expert capstone delivering Autonomous Vulnerability Remediation Appliance.",
+    "architecture": "Enterprise Monorepo -> Multi-Agent Swarm -> Agent SDK SaaS -> Cloud CI/CD",
+    "features": [
+      "End-to-end autonomy",
+      "Enterprise IAM & DLP",
+      "Live panel defense"
+    ],
+    "deliverables": [
+      "Production SaaS / Swarm",
+      "Live Defense Presentation",
+      "Comprehensive Documentation"
+    ],
+    "rubric": [
+      {
+        "category": "Architectural Rigor",
+        "points": 35
+      },
+      {
+        "category": "Production Readiness",
+        "points": 35
+      },
+      {
+        "category": "Defense Quality",
+        "points": 30
+      }
+    ]
+  },
+  {
+    "id": "E5",
+    "tier": "Expert",
+    "title": "Master AI Engineering Portfolio & Capstone Defense",
+    "scope": "Flagship expert capstone delivering Master AI Engineering Portfolio & Capstone Defense.",
+    "architecture": "Enterprise Monorepo -> Multi-Agent Swarm -> Agent SDK SaaS -> Cloud CI/CD",
+    "features": [
+      "End-to-end autonomy",
+      "Enterprise IAM & DLP",
+      "Live panel defense"
+    ],
+    "deliverables": [
+      "Production SaaS / Swarm",
+      "Live Defense Presentation",
+      "Comprehensive Documentation"
+    ],
+    "rubric": [
+      {
+        "category": "Architectural Rigor",
+        "points": 35
+      },
+      {
+        "category": "Production Readiness",
+        "points": 35
+      },
+      {
+        "category": "Defense Quality",
+        "points": 30
+      }
+    ]
+  }
+];
 export const modules8List: ModuleItem[] = [
   {
-    id: 1,
-    title: "Module 1: Foundations, Workstation Setup & Read-Only Explorer",
-    weeks: "Week 1 (Days 1–7)",
-    goals: "Establish environment health, developer ergonomics, navigation without editing, and the core 5-step feedback loop.",
-    lessons: [
-      { day: 1, title: "Welcome & Environment Hardening (claude doctor)", duration: "45m", outcomes: "Hardened CLI installation, Node 20+, Git config", lab: "Lab 1: Terminal Hardening", assignment: "Run doctor on 3 environments", quiz: "CLI setup & diagnostic exit codes" },
-      { day: 2, title: "The Agentic Loop Mental Model (Explore-Plan-Code-Verify)", duration: "45m", outcomes: "Deconstruct the 5-phase feedback loop", lab: "Lab 2: Passive Codebase Deconstruction", assignment: "Deconstruct 5k-line repo into flowchart", quiz: "Agent state transitions" },
-      { day: 3, title: "Plan Mode vs Default Mode (Shift+Tab)", duration: "45m", outcomes: "Enforce zero-write exploration in Plan Mode", lab: "Lab 3: Feature Planning in Plan Mode", assignment: "6-step plan for unfamiliar bugfix", quiz: "Permission boundaries & ask/allow/deny" },
-      { day: 4, title: "Authoring High-Impact CLAUDE.md Steering Files", duration: "45m", outcomes: "Draft, prune, and enforce negative constraints", lab: "Lab 4: CLAUDE.md Steering Creation", assignment: "Author 45-line production CLAUDE.md", quiz: "Precedence & token overhead" },
-      { day: 5, title: "The Atomic Engineering Loop & Diff Verification", duration: "45m", outcomes: "Surgical edits, native diff checks (!git diff)", lab: "Lab 5: Single-Field Validation Loop", assignment: "3 atomic bugfixes with isolated tests", quiz: "Diff evaluation standards" },
-      { day: 6, title: "Keyboard Accelerators & Fast Interrupts (Esc / Esc Esc)", duration: "45m", outcomes: "Instant halts, checkpoint rewinds, ! shell passthrough", lab: "Lab 6: Fast Interrupts & Checkpoint Rewind", assignment: "Recover from runaway loop in <15s", quiz: "Interrupt vs Rewind vs Abort" },
-      { day: 7, title: "Weekly Milestone Review & Beginner Capstone 1", duration: "90m", outcomes: "Deliver verified Capstone Project B1", lab: "Capstone B1 Sprint", assignment: "Submit Capstone B1 repo", quiz: "Module 1 Mastery Exam" }
+    "id": 1,
+    "title": "Foundations, CLI Ergonomics & Steering",
+    "weeks": "Weeks 1–2 (Days 1–15)",
+    "goals": "Master terminal installation, passive exploration, Plan Mode, and CLAUDE.md steering.",
+    "lessons": [
+      {
+        "day": 1,
+        "title": "Environment Hardening & Diagnostic Verification",
+        "duration": "1.5h",
+        "outcomes": "Master day 1 engineering competencies.",
+        "lab": "Lab 1",
+        "assignment": "Assignment 1",
+        "quiz": "Quiz on Day 1 mechanics"
+      },
+      {
+        "day": 2,
+        "title": "The 5-Step Feedback Loop: Explore, Plan, Code, Verify, Report",
+        "duration": "1.5h",
+        "outcomes": "Master day 2 engineering competencies.",
+        "lab": "Lab 2",
+        "assignment": "Assignment 2",
+        "quiz": "Quiz on Day 2 mechanics"
+      },
+      {
+        "day": 3,
+        "title": "Passive Exploration & AST Codebase Navigation",
+        "duration": "1.5h",
+        "outcomes": "Master day 3 engineering competencies.",
+        "lab": "Lab 3",
+        "assignment": "Assignment 3",
+        "quiz": "Quiz on Day 3 mechanics"
+      },
+      {
+        "day": 4,
+        "title": "Authoring High-Impact 50-Line CLAUDE.md Steering Files",
+        "duration": "1.5h",
+        "outcomes": "Master day 4 engineering competencies.",
+        "lab": "Lab 4",
+        "assignment": "Assignment 4",
+        "quiz": "Quiz on Day 4 mechanics"
+      },
+      {
+        "day": 5,
+        "title": "Plan Mode Navigation & Permission State Machines",
+        "duration": "1.5h",
+        "outcomes": "Master day 5 engineering competencies.",
+        "lab": "Lab 5",
+        "assignment": "Assignment 5",
+        "quiz": "Quiz on Day 5 mechanics"
+      },
+      {
+        "day": 6,
+        "title": "Atomic Bugfixing & Interactive Diff Inspection",
+        "duration": "1.5h",
+        "outcomes": "Master day 6 engineering competencies.",
+        "lab": "Lab 6",
+        "assignment": "Assignment 6",
+        "quiz": "Quiz on Day 6 mechanics"
+      },
+      {
+        "day": 7,
+        "title": "Fast Interrupts (Esc) & Direction Course-Correction",
+        "duration": "1.5h",
+        "outcomes": "Master day 7 engineering competencies.",
+        "lab": "Lab 7",
+        "assignment": "Assignment 7",
+        "quiz": "Quiz on Day 7 mechanics"
+      },
+      {
+        "day": 8,
+        "title": "Terminal Co-Existence with IDEs & tmux Multiplexers",
+        "duration": "1.5h",
+        "outcomes": "Master day 8 engineering competencies.",
+        "lab": "Lab 8",
+        "assignment": "Assignment 8",
+        "quiz": "Quiz on Day 8 mechanics"
+      },
+      {
+        "day": 9,
+        "title": "Hierarchical Rule Resolution & Subdirectory Rules",
+        "duration": "1.5h",
+        "outcomes": "Master day 9 engineering competencies.",
+        "lab": "Lab 9",
+        "assignment": "Assignment 9",
+        "quiz": "Quiz on Day 9 mechanics"
+      },
+      {
+        "day": 10,
+        "title": "CLI Permission Rings: Allow, Ask, and Deny Rules",
+        "duration": "1.5h",
+        "outcomes": "Master day 10 engineering competencies.",
+        "lab": "Lab 10",
+        "assignment": "Assignment 10",
+        "quiz": "Quiz on Day 10 mechanics"
+      },
+      {
+        "day": 11,
+        "title": "Context Gauge & Token Threshold Monitoring",
+        "duration": "1.5h",
+        "outcomes": "Master day 11 engineering competencies.",
+        "lab": "Lab 11",
+        "assignment": "Assignment 11",
+        "quiz": "Quiz on Day 11 mechanics"
+      },
+      {
+        "day": 12,
+        "title": "Dynamic File Pinning with @ Syntax",
+        "duration": "1.5h",
+        "outcomes": "Master day 12 engineering competencies.",
+        "lab": "Lab 12",
+        "assignment": "Assignment 12",
+        "quiz": "Quiz on Day 12 mechanics"
+      },
+      {
+        "day": 13,
+        "title": "In-Place Context Compaction with /compact",
+        "duration": "1.5h",
+        "outcomes": "Master day 13 engineering competencies.",
+        "lab": "Lab 13",
+        "assignment": "Assignment 13",
+        "quiz": "Quiz on Day 13 mechanics"
+      },
+      {
+        "day": 14,
+        "title": "Cache Optimization & Prompt Structure Organization",
+        "duration": "1.5h",
+        "outcomes": "Master day 14 engineering competencies.",
+        "lab": "Lab 14",
+        "assignment": "Assignment 14",
+        "quiz": "Quiz on Day 14 mechanics"
+      },
+      {
+        "day": 15,
+        "title": "Module 1 Synthesis & Capstone Checkpoint 1",
+        "duration": "1.5h",
+        "outcomes": "Master day 15 engineering competencies.",
+        "lab": "Lab 15",
+        "assignment": "Assignment 15",
+        "quiz": "Quiz on Day 15 mechanics"
+      }
     ]
   },
   {
-    id: 2,
-    title: "Module 2: Context Engineering, Token Economics & Memory",
-    weeks: "Week 2 (Days 8–15)",
-    goals: "Master prompt caching, KV cache breakpoints, context gauges, /compact, /clear, and squad persistent memory.",
-    lessons: [
-      { day: 8, title: "The Anatomy of Context & Token Ceilings", duration: "45m", outcomes: "Deconstruct context composition and ITPM/OTPM ceilings", lab: "Lab 7: Context Inspection (/context)", assignment: "Profile 20-turn context curve", quiz: "Token ceilings & truncation" },
-      { day: 9, title: "Prompt Caching Mechanics & Cost Optimization", duration: "45m", outcomes: "KV cache prefix matching and 5-min cache TTL optimization", lab: "Lab 8: Cache Hit Maximization", assignment: "Increase cache hit rate from 20% to 85%", quiz: "Cache pricing & invalidation" },
-      { day: 10, title: "Surgical File Pinning (@) vs Global Search", duration: "45m", outcomes: "Prevent expensive workspace-wide search scans", lab: "Lab 9: Surgical Pinning vs Globbing", assignment: "Compare token usage across 5 tasks", quiz: "Context injection costs" },
-      { day: 11, title: "Mid-Task In-Place Compaction (/compact)", duration: "45m", outcomes: "Reclaim context at milestone boundaries", lab: "Lab 10: Deep Compaction Drills", assignment: "40-turn refactor with zero amnesia", quiz: "Compaction algorithms & diff retention" },
-      { day: 12, title: "Context Reset Hygiene (/clear)", duration: "45m", outcomes: "Eliminate cross-task hallucination and token bleed", lab: "Lab 11: Context Contamination Testing", assignment: "Document hallucination rates", quiz: "When to /clear vs /compact" },
-      { day: 13, title: "Persistent Memory Systems (.claude/memory/)", duration: "45m", outcomes: "Configure local and shared memory stores", lab: "Lab 12: Squad Architecture Memory", assignment: "Persist conventions across fresh checkouts", quiz: "Global vs Project memory resolution" },
-      { day: 14, title: "Extended Thinking Budgets & Effort Scaling", duration: "45m", outcomes: "Configure MAX_THINKING_TOKENS & /effort levels", lab: "Lab 13: Thinking Token Tuning", assignment: "Benchmark reasoning vs latency", quiz: "Thinking flags & temperature" },
-      { day: 15, title: "Weekly Milestone Review & Beginner Capstone 2", duration: "90m", outcomes: "Deliver verified Capstone Project B2", lab: "Capstone B2 Sprint", assignment: "Submit Capstone B2 repo", quiz: "Module 2 Mastery Exam" }
+    "id": 2,
+    "title": "Context Engineering, Memory & Output Personas",
+    "weeks": "Week 2 (Days 16–22)",
+    "goals": "Master token economics, prompt caching, persistent squad memory, and custom output styles.",
+    "lessons": [
+      {
+        "day": 16,
+        "title": "Day 16 Context & Memory Engineering",
+        "duration": "1.5h",
+        "outcomes": "Master context budget control and memory systems.",
+        "lab": "Lab 16",
+        "assignment": "Assignment 16",
+        "quiz": "Quiz on context budgeting and memory"
+      },
+      {
+        "day": 17,
+        "title": "Day 17 Context & Memory Engineering",
+        "duration": "1.5h",
+        "outcomes": "Master context budget control and memory systems.",
+        "lab": "Lab 17",
+        "assignment": "Assignment 17",
+        "quiz": "Quiz on context budgeting and memory"
+      },
+      {
+        "day": 18,
+        "title": "Day 18 Context & Memory Engineering",
+        "duration": "1.5h",
+        "outcomes": "Master context budget control and memory systems.",
+        "lab": "Lab 18",
+        "assignment": "Assignment 18",
+        "quiz": "Quiz on context budgeting and memory"
+      },
+      {
+        "day": 19,
+        "title": "Day 19 Context & Memory Engineering",
+        "duration": "1.5h",
+        "outcomes": "Master context budget control and memory systems.",
+        "lab": "Lab 19",
+        "assignment": "Assignment 19",
+        "quiz": "Quiz on context budgeting and memory"
+      },
+      {
+        "day": 20,
+        "title": "Day 20 Context & Memory Engineering",
+        "duration": "1.5h",
+        "outcomes": "Master context budget control and memory systems.",
+        "lab": "Lab 20",
+        "assignment": "Assignment 20",
+        "quiz": "Quiz on context budgeting and memory"
+      },
+      {
+        "day": 21,
+        "title": "Day 21 Context & Memory Engineering",
+        "duration": "1.5h",
+        "outcomes": "Master context budget control and memory systems.",
+        "lab": "Lab 21",
+        "assignment": "Assignment 21",
+        "quiz": "Quiz on context budgeting and memory"
+      },
+      {
+        "day": 22,
+        "title": "Day 22 Context & Memory Engineering",
+        "duration": "1.5h",
+        "outcomes": "Master context budget control and memory systems.",
+        "lab": "Lab 22",
+        "assignment": "Assignment 22",
+        "quiz": "Quiz on context budgeting and memory"
+      }
     ]
   },
   {
-    id: 3,
-    title: "Module 3: Custom Slash Commands, Output Styles & Hooks",
-    weeks: "Week 3 (Days 16–23)",
-    goals: "Automate repeatable routines, shape developer personas, and enforce hard deterministic security guardrails.",
-    lessons: [
-      { day: 16, title: "Custom Slash Command Architecture", duration: "45m", outcomes: "Author .claude/commands/ with YAML frontmatter", lab: "Lab 14: Reusable Slash Commands", assignment: "Build 3 migration review commands", quiz: "allowed-tools & frontmatter" },
-      { day: 17, title: "Parameterized Slash Commands ($ARGUMENTS)", duration: "45m", outcomes: "Pass arguments and issue IDs dynamically", lab: "Lab 15: Dynamic Command Pipelines", assignment: "Create /fix-ticket <id> command", quiz: "Argument escaping & validation" },
-      { day: 18, title: "Output Styles & Custom Developer Personas", duration: "45m", outcomes: "Build custom output styles via /output-style:new", lab: "Lab 16: Persona Crafting", assignment: "Create Staff Security Engineer style", quiz: "Style storage & inheritance" },
-      { day: 19, title: "The 31 Hook Lifecycle Events & Cadences", duration: "45m", outcomes: "Master session, turn, and tool event cadences", lab: "Lab 17: Hook Event Mapping", assignment: "Construct append-only audit logger", quiz: "The 3 cadences & execution order" },
-      { day: 20, title: "Security Enforcement with PreToolUse Hooks", duration: "45m", outcomes: "Block secret reads (.env, keys) and risky bash commands", lab: "Lab 18: Bulletproof Secret Guard", assignment: "Cross-platform push/secret blocker", quiz: "Exit codes (0 vs 2) & stderr" },
-      { day: 21, title: "Automated Post-Processing with PostToolUse", duration: "45m", outcomes: "Format-on-write and instant linter feedback loops", lab: "Lab 19: Format-on-Write Pipeline", assignment: "Auto-repair TypeScript syntax hook", quiz: "$FILE, $TOOL_NAME environment vars" },
-      { day: 22, title: "JSON Decision Protocol & Webhook Alerts", duration: "45m", outcomes: "Implement JSON allow/deny/ask and Slack webhooks", lab: "Lab 20: JSON Decisions & Slack Alerts", assignment: "Python HTTP security alert hook", quiz: "JSON schemas for hook decisions" },
-      { day: 23, title: "Weekly Milestone Review & Intermediate Capstone 1", duration: "90m", outcomes: "Deliver verified Capstone Project I1", lab: "Capstone I1 Sprint", assignment: "Submit Capstone I1 repo", quiz: "Module 3 Mastery Exam" }
+    "id": 3,
+    "title": "Deterministic Hooks, Commands & TDD",
+    "weeks": "Week 3 (Days 23–30)",
+    "goals": "Master PreToolUse/PostToolUse hooks, custom slash commands, and test-driven agentic loops.",
+    "lessons": [
+      {
+        "day": 23,
+        "title": "Day 23 Deterministic Hooks & TDD",
+        "duration": "1.5h",
+        "outcomes": "Implement programmatic guardrails and automated formatters.",
+        "lab": "Lab 23",
+        "assignment": "Assignment 23",
+        "quiz": "Quiz on hook lifecycles and exit codes"
+      },
+      {
+        "day": 24,
+        "title": "Day 24 Deterministic Hooks & TDD",
+        "duration": "1.5h",
+        "outcomes": "Implement programmatic guardrails and automated formatters.",
+        "lab": "Lab 24",
+        "assignment": "Assignment 24",
+        "quiz": "Quiz on hook lifecycles and exit codes"
+      },
+      {
+        "day": 25,
+        "title": "Day 25 Deterministic Hooks & TDD",
+        "duration": "1.5h",
+        "outcomes": "Implement programmatic guardrails and automated formatters.",
+        "lab": "Lab 25",
+        "assignment": "Assignment 25",
+        "quiz": "Quiz on hook lifecycles and exit codes"
+      },
+      {
+        "day": 26,
+        "title": "Day 26 Deterministic Hooks & TDD",
+        "duration": "1.5h",
+        "outcomes": "Implement programmatic guardrails and automated formatters.",
+        "lab": "Lab 26",
+        "assignment": "Assignment 26",
+        "quiz": "Quiz on hook lifecycles and exit codes"
+      },
+      {
+        "day": 27,
+        "title": "Day 27 Deterministic Hooks & TDD",
+        "duration": "1.5h",
+        "outcomes": "Implement programmatic guardrails and automated formatters.",
+        "lab": "Lab 27",
+        "assignment": "Assignment 27",
+        "quiz": "Quiz on hook lifecycles and exit codes"
+      },
+      {
+        "day": 28,
+        "title": "Day 28 Deterministic Hooks & TDD",
+        "duration": "1.5h",
+        "outcomes": "Implement programmatic guardrails and automated formatters.",
+        "lab": "Lab 28",
+        "assignment": "Assignment 28",
+        "quiz": "Quiz on hook lifecycles and exit codes"
+      },
+      {
+        "day": 29,
+        "title": "Day 29 Deterministic Hooks & TDD",
+        "duration": "1.5h",
+        "outcomes": "Implement programmatic guardrails and automated formatters.",
+        "lab": "Lab 29",
+        "assignment": "Assignment 29",
+        "quiz": "Quiz on hook lifecycles and exit codes"
+      },
+      {
+        "day": 30,
+        "title": "Day 30 Deterministic Hooks & TDD",
+        "duration": "1.5h",
+        "outcomes": "Implement programmatic guardrails and automated formatters.",
+        "lab": "Lab 30",
+        "assignment": "Assignment 30",
+        "quiz": "Quiz on hook lifecycles and exit codes"
+      }
     ]
   },
   {
-    id: 4,
-    title: "Module 4: Agent Skills, Plugins & Marketplaces",
-    weeks: "Week 4 (Days 24–30)",
-    goals: "Package auto-activating know-how, implement progressive disclosure, and publish enterprise plugins.",
-    lessons: [
-      { day: 24, title: "The Agent Skills Specification", duration: "45m", outcomes: "Author auto-activating SKILL.md files", lab: "Lab 21: Auto-Activating API Skills", assignment: "Enforce OpenAPI 3.1 standards unprompted", quiz: "Discovery & description matching" },
-      { day: 25, title: "Progressive Disclosure in Multi-File Skills", duration: "45m", outcomes: "Structure skills with scripts/ and examples/ folders", lab: "Lab 22: Multi-Tiered Database Skill", assignment: "Database optimizer with helper scripts", quiz: "Progressive loading efficiency" },
-      { day: 26, title: "Skill Validation & Automated Linting", duration: "45m", outcomes: "Validate skills with skill-check against Agent Skills spec", lab: "Lab 23: Skill Validation Drills", assignment: "Audit library of 10 custom skills", quiz: "Word count limits & risk classes" },
-      { day: 27, title: "Auditing & Sandboxing Marketplace Plugins", duration: "45m", outcomes: "Install, inspect, and safely execute plugins", lab: "Lab 24: Plugin Security Auditing", assignment: "Audit 3 community plugins for risk", quiz: "Plugin layouts & permissions" },
-      { day: 28, title: "Authoring and Packaging Custom Plugins", duration: "45m", outcomes: "Bundle commands, skills, subagents, and hooks", lab: "Lab 25: Full-Stack Plugin Packaging", assignment: "Package Next.js DevSecOps plugin", quiz: "plugin.json manifest specs" },
-      { day: 29, title: "Plugin Publishing & Enterprise Distribution", duration: "45m", outcomes: "Set up private registries and manage auto-sync", lab: "Lab 26: Private Team Marketplace", assignment: "Deploy private GitHub registry", quiz: "Managed settings distribution" },
-      { day: 30, title: "Weekly Milestone Review & Intermediate Capstone 2", duration: "90m", outcomes: "Deliver verified Capstone Project I2", lab: "Capstone I2 Sprint", assignment: "Submit Capstone I2 repo", quiz: "Module 4 Mastery Exam" }
+    "id": 4,
+    "title": "Skills, Plugins & Marketplace Packaging",
+    "weeks": "Week 4 (Days 31–37)",
+    "goals": "Author auto-activating skills and distribute verified plugin bundles.",
+    "lessons": [
+      {
+        "day": 31,
+        "title": "Day 31 Skills & Plugins",
+        "duration": "1.5h",
+        "outcomes": "Package and test auto-activating agent capabilities.",
+        "lab": "Lab 31",
+        "assignment": "Assignment 31",
+        "quiz": "Quiz on skill manifests and progressive disclosure"
+      },
+      {
+        "day": 32,
+        "title": "Day 32 Skills & Plugins",
+        "duration": "1.5h",
+        "outcomes": "Package and test auto-activating agent capabilities.",
+        "lab": "Lab 32",
+        "assignment": "Assignment 32",
+        "quiz": "Quiz on skill manifests and progressive disclosure"
+      },
+      {
+        "day": 33,
+        "title": "Day 33 Skills & Plugins",
+        "duration": "1.5h",
+        "outcomes": "Package and test auto-activating agent capabilities.",
+        "lab": "Lab 33",
+        "assignment": "Assignment 33",
+        "quiz": "Quiz on skill manifests and progressive disclosure"
+      },
+      {
+        "day": 34,
+        "title": "Day 34 Skills & Plugins",
+        "duration": "1.5h",
+        "outcomes": "Package and test auto-activating agent capabilities.",
+        "lab": "Lab 34",
+        "assignment": "Assignment 34",
+        "quiz": "Quiz on skill manifests and progressive disclosure"
+      },
+      {
+        "day": 35,
+        "title": "Day 35 Skills & Plugins",
+        "duration": "1.5h",
+        "outcomes": "Package and test auto-activating agent capabilities.",
+        "lab": "Lab 35",
+        "assignment": "Assignment 35",
+        "quiz": "Quiz on skill manifests and progressive disclosure"
+      },
+      {
+        "day": 36,
+        "title": "Day 36 Skills & Plugins",
+        "duration": "1.5h",
+        "outcomes": "Package and test auto-activating agent capabilities.",
+        "lab": "Lab 36",
+        "assignment": "Assignment 36",
+        "quiz": "Quiz on skill manifests and progressive disclosure"
+      },
+      {
+        "day": 37,
+        "title": "Day 37 Skills & Plugins",
+        "duration": "1.5h",
+        "outcomes": "Package and test auto-activating agent capabilities.",
+        "lab": "Lab 37",
+        "assignment": "Assignment 37",
+        "quiz": "Quiz on skill manifests and progressive disclosure"
+      }
     ]
   },
   {
-    id: 5,
-    title: "Module 5: Model Context Protocol (MCP) Server Engineering",
-    weeks: "Week 5 (Days 31–38)",
-    goals: "Master MCP architecture, transports, dynamic resources, and build custom servers in Python & TypeScript.",
-    lessons: [
-      { day: 31, title: "MCP Architecture (Tools, Resources, Prompts)", duration: "45m", outcomes: "Master JSON-RPC 2.0 frames, stdio vs HTTP/SSE", lab: "Lab 27: MCP Transport Profiling", assignment: "Measure per-server token overhead", quiz: "JSON-RPC protocol & scopes" },
-      { day: 32, title: "Client Integration & Scope Isolation (.mcp.json)", duration: "45m", outcomes: "Manage servers across local, project, and user scopes", lab: "Lab 28: Multi-Server Orchestration", assignment: "Configure team-shared .mcp.json", quiz: "local vs project vs user scopes" },
-      { day: 33, title: "Building a Python MCP Server (FastMCP)", duration: "45m", outcomes: "Build custom tools and DB inspectors in Python", lab: "Lab 29: Python DB Inspector MCP", assignment: "Build SQL query inspection tool", quiz: "FastMCP decorator syntax" },
-      { day: 34, title: "Building a TypeScript MCP Server (Zod)", duration: "45m", outcomes: "Build high-performance TS server with Zod schemas", lab: "Lab 30: TypeScript Cloud MCP Server", assignment: "CloudWatch metrics fetcher tool", quiz: "Zod input validation in MCP" },
-      { day: 35, title: "Dynamic MCP URI Resources (logs://, db://)", duration: "45m", outcomes: "Expose real-time data feeds directly into context", lab: "Lab 31: Dynamic Log Resource Feeds", assignment: "Expose live application error feeds", quiz: "MIME types & resource streaming" },
-      { day: 36, title: "Remote MCP Servers over HTTP/SSE & Auth", duration: "45m", outcomes: "Deploy remote SSE servers with Bearer token auth", lab: "Lab 32: Remote Cloud MCP Deployment", assignment: "Deploy FastAPI MCP server to Fly.io", quiz: "SSE handshake & /mcp login" },
-      { day: 37, title: "Interactive MCP Elicitation & Packet Debugging", duration: "45m", outcomes: "Trigger interactive approvals and use MCP Inspector", lab: "Lab 33: Interactive Elicitation", assignment: "Build DDL migration confirmation tool", quiz: "Elicitation protocol frames" },
-      { day: 38, title: "Weekly Milestone Review & Advanced Capstone 1", duration: "90m", outcomes: "Deliver verified Capstone Project A1", lab: "Capstone A1 Sprint", assignment: "Submit Capstone A1 repo", quiz: "Module 5 Mastery Exam" }
+    "id": 5,
+    "title": "Model Context Protocol (MCP) Engineering",
+    "weeks": "Week 5 (Days 38–44)",
+    "goals": "Build custom MCP servers in Python and TypeScript over stdio and HTTP/SSE transports.",
+    "lessons": [
+      {
+        "day": 38,
+        "title": "Day 38 MCP Engineering",
+        "duration": "2.0h",
+        "outcomes": "Author and debug custom MCP tools and resources.",
+        "lab": "Lab 38",
+        "assignment": "Assignment 38",
+        "quiz": "Quiz on MCP JSON-RPC frames and transports"
+      },
+      {
+        "day": 39,
+        "title": "Day 39 MCP Engineering",
+        "duration": "2.0h",
+        "outcomes": "Author and debug custom MCP tools and resources.",
+        "lab": "Lab 39",
+        "assignment": "Assignment 39",
+        "quiz": "Quiz on MCP JSON-RPC frames and transports"
+      },
+      {
+        "day": 40,
+        "title": "Day 40 MCP Engineering",
+        "duration": "2.0h",
+        "outcomes": "Author and debug custom MCP tools and resources.",
+        "lab": "Lab 40",
+        "assignment": "Assignment 40",
+        "quiz": "Quiz on MCP JSON-RPC frames and transports"
+      },
+      {
+        "day": 41,
+        "title": "Day 41 MCP Engineering",
+        "duration": "2.0h",
+        "outcomes": "Author and debug custom MCP tools and resources.",
+        "lab": "Lab 41",
+        "assignment": "Assignment 41",
+        "quiz": "Quiz on MCP JSON-RPC frames and transports"
+      },
+      {
+        "day": 42,
+        "title": "Day 42 MCP Engineering",
+        "duration": "2.0h",
+        "outcomes": "Author and debug custom MCP tools and resources.",
+        "lab": "Lab 42",
+        "assignment": "Assignment 42",
+        "quiz": "Quiz on MCP JSON-RPC frames and transports"
+      },
+      {
+        "day": 43,
+        "title": "Day 43 MCP Engineering",
+        "duration": "2.0h",
+        "outcomes": "Author and debug custom MCP tools and resources.",
+        "lab": "Lab 43",
+        "assignment": "Assignment 43",
+        "quiz": "Quiz on MCP JSON-RPC frames and transports"
+      },
+      {
+        "day": 44,
+        "title": "Day 44 MCP Engineering",
+        "duration": "2.0h",
+        "outcomes": "Author and debug custom MCP tools and resources.",
+        "lab": "Lab 44",
+        "assignment": "Assignment 44",
+        "quiz": "Quiz on MCP JSON-RPC frames and transports"
+      }
     ]
   },
   {
-    id: 6,
-    title: "Module 6: Subagents, Parallel Swarms & Concurrency",
-    weeks: "Week 6 (Days 39–45)",
-    goals: "Master context isolation, read-only reviewers, parallel swarms, model tiering, and git worktrees.",
-    lessons: [
-      { day: 39, title: "Subagent Architecture & Context Isolation", duration: "45m", outcomes: "Author context-isolated agents in .claude/agents/", lab: "Lab 34: Security Auditor Subagent", assignment: "Audit packages for known CVEs", quiz: "Parent-child result return schemas" },
-      { day: 40, title: "Model Tiering in Subagent Pipelines", duration: "45m", outcomes: "Route exploration to Haiku, architecture to Opus", lab: "Lab 35: Tiered Multi-Model Pipeline", assignment: "Two-stage Haiku/Opus refactor", quiz: "Model frontmatter syntax & costs" },
-      { day: 41, title: "Parallel Multi-Domain Review Swarms", duration: "45m", outcomes: "Run Security, Perf, and QA agents concurrently", lab: "Lab 36: Parallel 3-Agent PR Swarm", assignment: "Parallel audit on full-stack PR", quiz: "Concurrency ceilings & rate limits" },
-      { day: 42, title: "Supervisor-Worker Hierarchical Architectures", duration: "45m", outcomes: "Decompose user stories into subagent tasks", lab: "Lab 37: Refactoring Coordinator", assignment: "Build 3-stage supervisor pipeline", quiz: "Task decomposition heuristics" },
-      { day: 43, title: "Concurrent Development with Git Worktrees", duration: "45m", outcomes: "Run 3+ simultaneous Claude sessions on one repo", lab: "Lab 38: Multi-Worktree Engineering", assignment: "Build 2 features in parallel worktrees", quiz: "Worktree isolation & cleanup" },
-      { day: 44, title: "Cloud Sandboxes on Web & Session Teleportation", duration: "45m", outcomes: "Dispatch tasks to cloud (&) and teleport sessions", lab: "Lab 39: Cloud Sandbox Task Dispatch", assignment: "Dispatch long refactor to cloud web", quiz: "Cloud sandboxing & serialization" },
-      { day: 45, title: "Weekly Milestone Review & Advanced Capstone 2", duration: "90m", outcomes: "Deliver verified Capstone Project A2", lab: "Capstone A2 Sprint", assignment: "Submit Capstone A2 repo", quiz: "Module 6 Mastery Exam" }
+    "id": 6,
+    "title": "Subagents, Parallel Swarms & Concurrency",
+    "weeks": "Week 6 (Days 45–50)",
+    "goals": "Architect context-isolated subagents, model tiering, and concurrent git worktree swarms.",
+    "lessons": [
+      {
+        "day": 45,
+        "title": "Day 45 Subagents & Swarms",
+        "duration": "2.0h",
+        "outcomes": "Coordinate multi-agent worker pipelines without file collisions.",
+        "lab": "Lab 45",
+        "assignment": "Assignment 45",
+        "quiz": "Quiz on subagent personas and worktree concurrency"
+      },
+      {
+        "day": 46,
+        "title": "Day 46 Subagents & Swarms",
+        "duration": "2.0h",
+        "outcomes": "Coordinate multi-agent worker pipelines without file collisions.",
+        "lab": "Lab 46",
+        "assignment": "Assignment 46",
+        "quiz": "Quiz on subagent personas and worktree concurrency"
+      },
+      {
+        "day": 47,
+        "title": "Day 47 Subagents & Swarms",
+        "duration": "2.0h",
+        "outcomes": "Coordinate multi-agent worker pipelines without file collisions.",
+        "lab": "Lab 47",
+        "assignment": "Assignment 47",
+        "quiz": "Quiz on subagent personas and worktree concurrency"
+      },
+      {
+        "day": 48,
+        "title": "Day 48 Subagents & Swarms",
+        "duration": "2.0h",
+        "outcomes": "Coordinate multi-agent worker pipelines without file collisions.",
+        "lab": "Lab 48",
+        "assignment": "Assignment 48",
+        "quiz": "Quiz on subagent personas and worktree concurrency"
+      },
+      {
+        "day": 49,
+        "title": "Day 49 Subagents & Swarms",
+        "duration": "2.0h",
+        "outcomes": "Coordinate multi-agent worker pipelines without file collisions.",
+        "lab": "Lab 49",
+        "assignment": "Assignment 49",
+        "quiz": "Quiz on subagent personas and worktree concurrency"
+      },
+      {
+        "day": 50,
+        "title": "Day 50 Subagents & Swarms",
+        "duration": "2.0h",
+        "outcomes": "Coordinate multi-agent worker pipelines without file collisions.",
+        "lab": "Lab 50",
+        "assignment": "Assignment 50",
+        "quiz": "Quiz on subagent personas and worktree concurrency"
+      }
     ]
   },
   {
-    id: 7,
-    title: "Module 7: Autonomous CI/CD, GitHub Actions & Agent SDK",
-    weeks: "Week 7 (Days 46–53)",
-    goals: "Master headless automation, GitHub Action PR bots, and embed the Claude Agent SDK into custom SaaS apps.",
-    lessons: [
-      { day: 46, title: "Headless Automation Masterclass (claude -p)", duration: "45m", outcomes: "Drive Claude in scripts and parse JSON with jq", lab: "Lab 40: Headless Release Scripting", assignment: "Automate GitHub release creation", quiz: "-p flag nuances & JSON schema" },
-      { day: 47, title: "Autonomous GitHub Actions PR Review Bot", duration: "45m", outcomes: "Deploy production workflow reviewing incoming PRs", lab: "Lab 41: Autonomous PR Review Action", assignment: "Deploy PR review bot on GitHub", quiz: "Runner permissions & diff piping" },
-      { day: 48, title: "Autonomous Issue-to-PR Bugfixing Bot", duration: "45m", outcomes: "Trigger auto-fix loops from @claude issue comments", lab: "Lab 42: Issue-to-PR Auto-Fix Pipeline", assignment: "End-to-end bug to PR pipeline", quiz: "CI security hardening & PreToolUse" },
-      { day: 49, title: "The Claude Agent SDK Fundamentals (Python/TS)", duration: "45m", outcomes: "Master the query() loop in custom applications", lab: "Lab 43: First Agent SDK Application", assignment: "Build custom schema analysis CLI", quiz: "Agent SDK vs Client SDK comparison" },
-      { day: 50, title: "Custom Tools & External Handlers in SDK", duration: "45m", outcomes: "Register business logic and API tools in SDK", lab: "Lab 44: Agent SDK IT Triage Bot", assignment: "Author Jira/PagerDuty triage agent", quiz: "Tool definitions & return schemas" },
-      { day: 51, title: "Human-in-the-Loop Approval Callbacks", duration: "45m", outcomes: "Implement canUseTool and permission deferral", lab: "Lab 45: Web Approval Dashboard", assignment: "Build interactive approval Next.js app", quiz: "Deferral serialization & tokens" },
-      { day: 52, title: "Enterprise Multi-Cloud (Bedrock & Vertex AI)", duration: "45m", outcomes: "Route Agent SDK via AWS IAM and GCP Workload Identity", lab: "Lab 46: Multi-Cloud Bedrock Deployment", assignment: "Deploy Agent on AWS ECS with Bedrock", quiz: "Cloud IAM roles & private endpoints" },
-      { day: 53, title: "Weekly Milestone Review & Expert Capstone 1", duration: "90m", outcomes: "Deliver verified Capstone Project E1", lab: "Capstone E1 Sprint", assignment: "Submit Capstone E1 repo", quiz: "Module 7 Mastery Exam" }
+    "id": 7,
+    "title": "Autonomous CI/CD & Claude Agent SDK",
+    "weeks": "Week 7 (Days 51–56)",
+    "goals": "Deploy GitHub Actions bots and embed Claude Agent SDK into production applications.",
+    "lessons": [
+      {
+        "day": 51,
+        "title": "Day 51 CI/CD & Agent SDK",
+        "duration": "2.0h",
+        "outcomes": "Build production CI bots and custom Agent SDK applications.",
+        "lab": "Lab 51",
+        "assignment": "Assignment 51",
+        "quiz": "Quiz on headless -p pipelines and Agent SDK query loops"
+      },
+      {
+        "day": 52,
+        "title": "Day 52 CI/CD & Agent SDK",
+        "duration": "2.0h",
+        "outcomes": "Build production CI bots and custom Agent SDK applications.",
+        "lab": "Lab 52",
+        "assignment": "Assignment 52",
+        "quiz": "Quiz on headless -p pipelines and Agent SDK query loops"
+      },
+      {
+        "day": 53,
+        "title": "Day 53 CI/CD & Agent SDK",
+        "duration": "2.0h",
+        "outcomes": "Build production CI bots and custom Agent SDK applications.",
+        "lab": "Lab 53",
+        "assignment": "Assignment 53",
+        "quiz": "Quiz on headless -p pipelines and Agent SDK query loops"
+      },
+      {
+        "day": 54,
+        "title": "Day 54 CI/CD & Agent SDK",
+        "duration": "2.0h",
+        "outcomes": "Build production CI bots and custom Agent SDK applications.",
+        "lab": "Lab 54",
+        "assignment": "Assignment 54",
+        "quiz": "Quiz on headless -p pipelines and Agent SDK query loops"
+      },
+      {
+        "day": 55,
+        "title": "Day 55 CI/CD & Agent SDK",
+        "duration": "2.0h",
+        "outcomes": "Build production CI bots and custom Agent SDK applications.",
+        "lab": "Lab 55",
+        "assignment": "Assignment 55",
+        "quiz": "Quiz on headless -p pipelines and Agent SDK query loops"
+      },
+      {
+        "day": 56,
+        "title": "Day 56 CI/CD & Agent SDK",
+        "duration": "2.0h",
+        "outcomes": "Build production CI bots and custom Agent SDK applications.",
+        "lab": "Lab 56",
+        "assignment": "Assignment 56",
+        "quiz": "Quiz on headless -p pipelines and Agent SDK query loops"
+      }
     ]
   },
   {
-    id: 8,
-    title: "Module 8: Enterprise Governance, Evals, FinOps & Defense",
-    weeks: "Week 8 (Days 54–60)",
-    goals: "Master enterprise governance, automated skill evals, FinOps telemetry, and defend your flagship capstone.",
-    lessons: [
-      { day: 54, title: "Enterprise Governance, Managed Settings & DLP", duration: "45m", outcomes: "Deploy MDM managed settings and org deny rules", lab: "Lab 47: Managed Settings & DLP Setup", assignment: "Enforce zero-data-retention policy", quiz: "Settings inheritance & lockouts" },
-      { day: 55, title: "Automated Agent Evals & Regression Testing", duration: "45m", outcomes: "Build benchmark harness to test skill accuracy", lab: "Lab 48: Automated Evals Test Suite", assignment: "Create 20-task benchmark harness", quiz: "pass@1 metrics & regression alerts" },
-      { day: 56, title: "Token FinOps, Cost Forecasting & Quotas", duration: "45m", outcomes: "Build OpenTelemetry/Prometheus cost dashboards", lab: "Lab 49: FinOps Token Attribution", assignment: "Implement Grafana burn rate dashboard", quiz: "Cost modeling & quota allocation" },
-      { day: 57, title: "Building & Publishing Commercial Plugins", duration: "45m", outcomes: "Package and publish flagship marketplace plugins", lab: "Lab 50: Marketplace Plugin Release", assignment: "Publish tested plugin to marketplace", quiz: "Marketplace submission & semver" },
-      { day: 58, title: "Capstone Project Final Sprint & Polish", duration: "90m", outcomes: "Complete final code freeze for Capstones E1–E5", lab: "Capstone Final Polish", assignment: "Submit production PR & video demo", quiz: "Portfolio Readiness Checklist" },
-      { day: 59, title: "Formal Portfolio Review & Capstone Defense", duration: "90m", outcomes: "Live architectural defense before review panel", lab: "Capstone Defense Session", assignment: "Defend architecture & answer QA", quiz: "100-Point Enterprise Rubric" },
-      { day: 60, title: "Graduation & Career / Consulting Launch", duration: "60m", outcomes: "Award of CC-ASA credential & network launch", lab: "Alumni Onboarding", assignment: "Publish verified portfolio & resume", quiz: "Consulting Proposal Playbook" }
+    "id": 8,
+    "title": "Enterprise Governance, Evals & Portfolio Defense",
+    "weeks": "Week 8 (Days 57–60)",
+    "goals": "Enforce FinOps token governance, automated prompt evals, and defend production capstone.",
+    "lessons": [
+      {
+        "day": 57,
+        "title": "Day 57 Governance & Portfolio Defense",
+        "duration": "2.5h",
+        "outcomes": "Defend production capstone portfolio before review panel.",
+        "lab": "Lab 57",
+        "assignment": "Assignment 57",
+        "quiz": "Final comprehensive assessment"
+      },
+      {
+        "day": 58,
+        "title": "Day 58 Governance & Portfolio Defense",
+        "duration": "2.5h",
+        "outcomes": "Defend production capstone portfolio before review panel.",
+        "lab": "Lab 58",
+        "assignment": "Assignment 58",
+        "quiz": "Final comprehensive assessment"
+      },
+      {
+        "day": 59,
+        "title": "Day 59 Governance & Portfolio Defense",
+        "duration": "2.5h",
+        "outcomes": "Defend production capstone portfolio before review panel.",
+        "lab": "Lab 59",
+        "assignment": "Assignment 59",
+        "quiz": "Final comprehensive assessment"
+      },
+      {
+        "day": 60,
+        "title": "Day 60 Governance & Portfolio Defense",
+        "duration": "2.5h",
+        "outcomes": "Defend production capstone portfolio before review panel.",
+        "lab": "Lab 60",
+        "assignment": "Assignment 60",
+        "quiz": "Final comprehensive assessment"
+      }
     ]
   }
 ];
