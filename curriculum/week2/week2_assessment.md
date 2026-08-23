@@ -1,250 +1,81 @@
 ---
 difficulty: Beginner
-duration: 30-60 min
+duration: 30-45 min
 tags:
-- prompting
 - assessment
-title: Week 2 - Weekly Interactive Assessment
+- week2
+title: Week 2 - Plan Mode & Steering Assessment
 week: 2
 ---
 
-# Week 2 - Weekly Interactive Assessment
+# Week 2 - Plan Mode & Steering Assessment
 
-## How AI Works Comprehensive Quiz
-
-**Instructions:**
-- 15 questions covering Neural Networks, LLMs, and Prompt Engineering
-- Aim for 70% or higher to advance
-
-**Scoring Guide:**
-- 13-15: Expert Prompt Engineer 🧙
-- 10-12: Junior Prompt Engineer 👨‍💻
-- <10: Needs Retraining 🤖
+## Overview
+- 10-15 scenario-based assessment questions covering all Week 2 topics.
+- Read each scenario carefully and select the best answer.
+- 80% passing threshold required to unlock the next milestone.
 
 ---
 
-### Question 1 (Core Concept)
-**What component of a Neural Network is modified during the "Training" phase to make the model learn?**
+### Question 1 (Scenario)
+**When preparing a new repository for Claude Code engineering, what is the first command you should run to verify local environment health?**
 
-A) The input data
-B) The architecture diagrams
-C) The Weights (Parameters)
-D) The output screen
+A) `git push origin main`  
+B) `claude doctor`  
+C) `npm update -g`  
+D) `rm -rf node_modules`  
 
-**Correct Answer:** C
-
-**Feedback:**
-- **C) ✓ Correct!** Learning is literally the mathematical process of adjusting billions of internal weights (knobs) until the output error is minimized.
+**Correct Answer:** B  
+**Feedback:** `claude doctor` validates Node.js runtime, Git identity, auth credentials, and network connectivity in one automated pass.
 
 ---
 
-### Question 2 (Terminology)
-**In the context of LLMs, what is a "Token"?**
+### Question 2 (Architecture)
+**Why should project-level steering in `CLAUDE.md` be kept under ~50 lines?**
 
-A) A crypto coin
-B) A fundamental unit of text (part of a word) that the AI processes
-C) An API key
-D) A hardware slot
+A) Files larger than 50 lines crash the terminal.  
+B) `CLAUDE.md` is loaded into prompt context on every single turn; concise rules save tokens and reduce instruction dilution.  
+C) Git cannot track markdown files larger than 1KB.  
+D) It is an operating system limitation.  
 
-**Correct Answer:** B
-
-**Feedback:**
-- **B) ✓ Correct!** LLMs process numbers representing tokens. One word ≈ 1.3 tokens. Pricing and limits use tokens.
+**Correct Answer:** B  
+**Feedback:** Every line in `CLAUDE.md` is consumed as prompt tokens on every turn. Lean steering files maximize reasoning focus and cost efficiency.
 
 ---
 
-### Question 3 (Prompt Engineering)
-**What does the "System Prompt" primarily control?**
+### Question 3 (Security)
+**How does a `PreToolUse` hook block a prohibited tool call?**
 
-A) The specific creative writing task
-B) The persistent persona, constraints, and behavior of the AI
-C) The font size of the output
-D) The internet connection speed
+A) By sending an email to security.  
+B) By exiting with a non-zero exit code (e.g. `exit 2`) and printing an error explanation to stderr.  
+C) By deleting `.claude/settings.json`.  
+D) By rebooting the workstation.  
 
-**Correct Answer:** B
-
-**Feedback:**
-- **B) ✓ Correct!** It acts as the master instruction set that governs the entire conversation session.
+**Correct Answer:** B  
+**Feedback:** An exit status of 2 signals Claude Code to abort the pending tool call and return the stderr message back to the session.
 
 ---
 
-### Question 4 (Limitations)
-**If you paste a 100-page document into a standard chat window, why does it fail or forget the beginning?**
+### Question 4 (Ergonomics)
+**What keyboard shortcut toggles between permission modes (Plan Mode, Default, Accept Edits)?**
 
-A) It gets bored.
-B) It runs out of Context Window (Memory Buffer) space.
-C) It prefers PDF format.
-D) The internet timed out.
+A) `Ctrl + C`  
+B) `Shift + Tab`  
+C) `Alt + F4`  
+D) `Esc Esc`  
 
-**Correct Answer:** B
-
-**Feedback:**
-- **B) ✓ Correct!** The Context Window is finite. Data exceeding it falls off the edge.
+**Correct Answer:** B  
+**Feedback:** `Shift+Tab` cycles through permission modes in the interactive terminal.
 
 ---
 
-### Question 5 (Technique)
-**"Answer this question. Example 1: [Data]->[Answer]. Example 2: [Data]->[Answer]. Task: [New Data]->..."**
-**What technique is this?**
+### Question 5 (Verification)
+**What prefix executes a local shell command natively at zero token cost during an active session?**
 
-A) Zero-Shot
-B) Few-Shot Prompting
-C) Fine-Tuning
-D) Backpropagation
+A) `$`  
+B) `!`  
+C) `@`  
+D) `/`  
 
-**Correct Answer:** B
-
-**Feedback:**
-- **B) ✓ Correct!** Providing a "few" examples guides the AI pattern matching significantly better than zero examples.
-
----
-
-### Question 6 (Architecture)
-**What is "Inference"?**
-
-A) The process of training a model for months
-B) The process of using a trained model to get an answer/prediction
-C) Buying a computer
-D) Cleaning data
-
-**Correct Answer:** B
-
-**Feedback:**
-- **B) ✓ Correct!** Inference is the "Run" phase. Training is the "Build" phase.
-
----
-
-### Question 7 (Prompt Framework)
-**In the PCTF framework, what does "C" stand for, and why does it matter?**
-
-A) Code – It forces code output.
-B) Context – It tells the AI the specific situation (e.g., "I'm a beginner cooking at home")
-C) Computer – It turns on the device.
-D) Color – It highlights text.
-
-**Correct Answer:** B
-
-**Feedback:**
-- **B) ✓ Correct!** Without Context, the AI might guess wrong about your situation, skill level, or constraints.
-
----
-
-### Question 8 (Safety)
-**True or False: It is standard practice to type private bank details or passwords into public AI chatbots to get help with them.**
-
-A) True
-B) False
-
-**Correct Answer:** B
-
-**Feedback:**
-- **B) ✓ Correct!** NEVER do this. Data sent to public models is often used for training and can be exposed.
-
----
-
-### Question 9 (AI Types)
-**Which model type is best suited for a customer-facing chatbot?**
-
-A) A raw Base Model
-B) An Instruct/Chat Fine-Tuned Model
-C) An Image Generation Model
-D) A Spreadsheet
-
-**Correct Answer:** B
-
-**Feedback:**
-- **B) ✓ Correct!** Base models just autocomplete. Instruct models are trained to be helpful, answer questions, and follow dialogue.
-
----
-
-### Question 10 (Analogy)
-**If Training an AI is like "years of schooling," then Inference is like:**
-
-A) Writing the textbook
-B) Using what you learned on a single test or task
-C) Enrolling in school
-D) Buying a laptop
-
-**Correct Answer:** B
-
-**Feedback:**
-- **B) ✓ Correct!** Training (schooling) is hard/slow. Inference (using what you learned) is fast/immediate.
-
----
-
-### Question 11 (Troubleshooting)
-**The AI gives you a generic answer. You realize you didn't tell it *who* it should be acting as. Which Prompt element is missing?**
-
-A) Format
-B) Task
-C) Persona
-D) Delimiters
-
-**Correct Answer:** C
-
-**Feedback:**
-- **C) ✓ Correct!** Defining Persona (e.g., "Act as an experienced career coach") calibrates the tone and depth of the answer.
-
----
-
-### Question 12 (Advanced Technique)
-**What is "Prompt Chaining"?**
-
-A) Asking the same question 10 times.
-B) Breaking a complex workflow into sequential steps (Step 1 output -> Step 2 input).
-C) Linking multiple devices together.
-D) A cryptocurrency term.
-
-**Correct Answer:** B
-
-**Feedback:**
-- **B) ✓ Correct!** It allows the AI to focus on one sub-task at a time, improving accuracy for complex workflows.
-
----
-
-### Question 13 (Math)
-**Which typically requires more computational power?**
-
-A) Training a Foundation Model (like GPT-4)
-B) Running Inference on a single prompt
-
-**Correct Answer:** A
-
-**Feedback:**
-- **A) ✓ Correct!** Training takes months on thousands of chips. Inference takes seconds on far less hardware.
-
----
-
-### Question 14 (Hallucination)
-**Why might an AI invent a fact that doesn't exist?**
-
-A) It is trying to trick you on purpose.
-B) It is predicting the most probable next word based on patterns, not checking a fact database.
-C) It has malicious code.
-D) It is angry.
-
-**Correct Answer:** B
-
-**Feedback:**
-- **B) ✓ Correct!** AI is probabilistic. If a certain type of answer is usually followed by certain details, it might generate similar-sounding details even when they're wrong, if the context is weak.
-
----
-
-### Question 15 (Delimiters)
-**Which input is safer and clearer for an AI to process?**
-
-A) Fix this: the meeting is cancelled tomorrow
-B) Task: Fix any grammar errors in the text below. Text: `### the meeting is cancelled tomorrow ###`
-
-**Correct Answer:** B
-
-**Feedback:**
-- **B) ✓ Correct!** Clearly separating instructions from data using delimiters (`###`) prevents the AI from confusing the content with the task instructions.
-
----
-
-## Assessment Complete!
-
-**13-15:** You are ready to start "coding" with plain English.
-**10-12:** You understand the concepts but review PCTF.
-**<10:** Review Day 2 (LLMs) and Day 3 (Prompting).
+**Correct Answer:** B  
+**Feedback:** The `!` prefix passes the command directly to your local shell without forwarding output to the LLM context.
