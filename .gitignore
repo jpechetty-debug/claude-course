@@ -5,12 +5,32 @@ node_modules/
 # Production build
 dist/
 */dist/
+staticfiles/
+*/staticfiles/
+
+# Databases
+*.sqlite3
+*.db
 
 # Logs
 *.log
+*/logs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Python
+__pycache__/
+*/__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+ENV/
+
+# Temporary extractions
+ai_basics_extracted/
+zip_extracted/dist/
 
 # OS / Editor
 .DS_Store

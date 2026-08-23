@@ -1,0 +1,524 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ lesson.title }} - AI Course for Beginners{% endblock %}
+
+{% block content %}
+<div class="flex flex-col lg:flex-row min-h-screen">
+    <!-- Sidebar Drawer (Mobile Overlay) -->
+    <div id="sidebar-backdrop" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 hidden transition-opacity duration-300"></div>
+
+    <!-- Sidebar -->
+    <aside id="course-sidebar"
+        class="lg:w-85 bg-white border-r border-slate-200 shadow-2xl fixed inset-y-0 left-0 lg:top-20 lg:bottom-0 overflow-y-auto z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out scrollbar-hide lg:block">
+        <div class="p-8">
+            <h3
+                class="text-[0.65rem] font-black text-slate-400 uppercase tracking-[0.2em] mb-8 flex items-center gap-2">
+                <span class="w-2 h-2 bg-brand-400 rounded-full"></span>
+                Operations Guide
+            </h3>
+
+            {% for phase in phases %}
+            <div class="mb-10">
+                <div class="flex items-center gap-3 mb-6 px-2">
+                    <span class="text-[0.6rem] font-black text-blue-500 uppercase tracking-[0.2em] bg-blue-50 px-2 py-1 rounded">
+                        Section {{ forloop.counter }}
+                    </span>
+                    <h4 class="text-xs font-black text-slate-800 uppercase tracking-widest truncate">{{ phase.title }}</h4>
+                </div>
+
+                <div class="space-y-4">
+                    {% for item in phase.modules %}
+                    {% with module=item.module %}
+                    <div class="mb-4">
+                        <div class="flex items-center gap-3 group cursor-pointer">
+                            <div
+                                class="w-8 h-8 rounded-lg {% if module == lesson.module %}bg-brand-900 text-brand-400{% else %}bg-slate-50 text-slate-400{% endif %} flex items-center justify-center font-black text-xs shadow-sm transition-all group-hover:scale-110">
+                                {{ module.order }}
+                            </div>
+                            <a href="{% url 'courses:module_detail' module.slug %}"
+                                class="text-sm font-black {% if module == lesson.module %}text-brand-900{% else %}text-slate-500 hover:text-brand-900 transition-colors{% endif %}">
+                                {{ module.title }}
+                            </a>
+                        </div>
+        
+                        {% if module == lesson.module %}
+                        <div class="ml-4 pl-4 border-l-2 border-slate-100 space-y-2 mt-3">
+                            {% for mod_lesson in module.lessons.all %}
+                            <a href="{% if mod_lesson.content_type == 'assessment' %}{% url 'courses:assessment' mod_lesson.pk %}{% else %}{% url 'courses:lesson_detail' mod_lesson.pk %}{% endif %}"
+                                class="flex items-center gap-3 p-3 rounded-xl text-sm transition-all group {% if mod_lesson == lesson %}bg-brand-900 text-white shadow-xl translate-x-1{% else %}text-slate-500 hover:bg-slate-50 hover:text-brand-900{% endif %}">
+                                <div
+                                    class="w-2 h-2 rounded-full {% if mod_lesson == lesson %}bg-brand-400{% else %}bg-slate-300 group-hover:bg-brand-400{% endif %} transition-colors">
+                                </div>
+                                <span class="truncate font-bold">{{ mod_lesson.title|truncatechars:28 }}</span>
+                            </a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endwith %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </aside>
+
+    <!-- Mobile Sidebar Toggle -->
+    <div class="lg:hidden fixed bottom-6 left-6 z-40">
+        <button id="sidebar-toggle" class="w-14 h-14 bg-brand-900 text-brand-400 rounded-2xl flex items-center justify-center shadow-2xl active:scale-95 transition-all">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-1 lg:ml-85 bg-white transition-all duration-300">
+        <div class="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 py-12">
+            <!-- Breadcrumb -->
+            <nav class="mb-12">
+                <ol
+                    class="flex items-center gap-4 text-xs font-black uppercase tracking-[0.15em] text-slate-400 flex-wrap">
+                    <li><a href="{% url 'courses:dashboard' %}" class="hover:text-brand-900 transition-colors">HQ</a>
+                    </li>
+                    <li><svg class="w-3 h-3 text-slate-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg></li>
+                    <li><a href="{% url 'courses:module_detail' module_slug %}"
+                            class="hover:text-brand-900 transition-colors">{{ module_title }}</a></li>
+                    <li><svg class="w-3 h-3 text-slate-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg></li>
+                    <li class="text-brand-400">Day {{ lesson.order }}</li>
+                </ol>
+            </nav>
+
+            <!-- Lesson Summary / Quick Look -->
+            <div class="mb-16 bg-gradient-to-br from-brand-900 to-slate-800 rounded-[2.5rem] p-8 lg:p-12 shadow-2xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-400/10 blur-3xl rounded-full -mr-20 -mt-20 group-hover:bg-brand-400/20 transition-all duration-700"></div>
+                <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight">
+                            {{ lesson.title }}
+                        </h1>
+                        <div class="flex flex-wrap items-center gap-4 text-sm mb-8">
+                            <div class="flex items-center gap-2 px-3 py-1 bg-white/10 rounded-lg text-slate-300 font-bold">
+                                <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                {{ lesson.duration|default:"30-60 min" }}
+                            </div>
+                            <div class="px-3 py-1 bg-brand-400/20 text-brand-400 border border-brand-400/30 rounded-lg font-black uppercase text-[0.65rem] tracking-widest">
+                                {{ lesson.difficulty|default:"Standard" }}
+                            </div>
+                        </div>
+                        <p class="text-slate-400 font-bold text-lg leading-relaxed mb-0">
+                            Master the core principles of {{ lesson.title }} and apply them to your work and everyday life.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
+                        <h3 class="text-[0.65rem] font-black text-brand-400 uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
+                            <span class="w-2 h-2 bg-brand-400 rounded-full animate-pulse"></span>
+                            Mission Objectives
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3 h-3 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <span class="text-slate-300 text-sm font-medium">Core concept implementation</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3 h-3 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <span class="text-slate-300 text-sm font-medium">Real-world workflow application</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3 h-3 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <span class="text-slate-300 text-sm font-medium">Infrastructure security validation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Development Environment (New) -->
+            {% if lesson.replit_url or lesson.codespaces_url %}
+            <div class="mb-12 p-8 bg-blue-50/50 border border-blue-100 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center shadow-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-black text-slate-900">Live Hands-on Lab</h3>
+                        <p class="text-sm text-slate-500 font-medium">Launch a pre-configured coding environment for this lesson.</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    {% if lesson.replit_url %}
+                    <a href="{{ lesson.replit_url }}" target="_blank" 
+                        class="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-slate-800 transition shadow-lg active:scale-95">
+                        <img src="https://replit.com/favicon.ico" class="w-4 h-4" alt="Replit">
+                        Try on Replit
+                    </a>
+                    {% endif %}
+                    {% if lesson.codespaces_url %}
+                    <a href="{{ lesson.codespaces_url }}" target="_blank" 
+                        class="inline-flex items-center gap-2 bg-white text-slate-900 border border-slate-200 px-6 py-3 rounded-xl font-bold hover:bg-slate-50 transition shadow-sm active:scale-95">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub Codespaces
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Lesson Content -->
+            <article class="relative">
+                <div class="prose prose-slate prose-lg max-w-none">
+                    {{ content_html|safe }}
+                </div>
+            </article>
+
+            <!-- Daily Quiz Section -->
+            {% if daily_quiz %}
+            <div id="daily-quiz-container"
+                class="mt-24 p-1 rounded-[3rem] bg-gradient-to-br from-slate-100 to-slate-200 shadow-inner group">
+                <div class="bg-white rounded-[2.8rem] p-10 lg:p-14 border border-white shadow-2xl">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-16 h-16 bg-brand-900 rounded-3xl flex items-center justify-center shadow-xl rotate-3 group-hover:rotate-0 transition-transform">
+                                <svg class="w-8 h-8 text-brand-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h2 class="text-3xl font-black text-brand-900 tracking-tight">Knowledge Check</h2>
+                                <p class="text-slate-500 font-bold text-sm">Verify your session objectives</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 px-6 py-2 rounded-2xl flex items-center gap-3">
+                            <span class="text-blue-600 font-black text-xl">0.5</span>
+                            <span class="text-blue-400 font-bold text-xs uppercase tracking-widest">Mastery
+                                Points</span>
+                        </div>
+                    </div>
+
+                    <form id="quiz-form" class="space-y-12">
+                        {% for q in daily_quiz %}
+                        <div class="question-block group/q" data-question="{{ q.number }}">
+                            <div class="flex gap-6 mb-6">
+                                <span
+                                    class="text-4xl font-black text-slate-100 group-hover/q:text-brand-400/20 transition-colors leading-none italic">{{ q.number|stringformat:"02d" }}</span>
+                                <p class="text-xl font-bold text-brand-900 pt-1 leading-relaxed">{{ q.text }}</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-4 ml-0 sm:ml-16">
+                                {% for opt in q.options %}
+                                <label
+                                    class="quiz-option relative flex items-center p-6 border-2 border-slate-100 rounded-[1.5rem] cursor-pointer bg-slate-50/50 transition-all hover:bg-white hover:border-blue-500/20 hover:shadow-lg group/opt">
+                                    <input type="radio" name="q{{ q.number }}" value="{{ opt.letter }}"
+                                        class="hidden peer">
+                                    <div
+                                        class="w-10 h-10 rounded-xl bg-white border-2 border-slate-200 flex items-center justify-center mr-4 font-black transition-all peer-checked:bg-brand-900 peer-checked:border-brand-900 peer-checked:text-brand-400 group-hover/opt:border-blue-300">
+                                        {{ opt.letter }}
+                                    </div>
+                                    <span class="text-slate-700 font-bold leading-relaxed">{{ opt.text }}</span>
+
+                                    <!-- Indicator -->
+                                    <div class="absolute right-6 opacity-0 peer-checked:opacity-100 transition-opacity">
+                                        <div class="w-2 h-2 rounded-full bg-brand-400"></div>
+                                    </div>
+                                </label>
+                                {% endfor %}
+                            </div>
+
+                            <div class="feedback hidden mt-8 ml-0 sm:ml-16 p-6 rounded-[1.5rem] border-2 animate-bounce-in">
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                        <div class="pt-8 flex flex-col items-center gap-6">
+                            <button type="submit" id="submit-btn"
+                                class="bg-brand-900 hover:bg-slate-800 text-white px-12 py-5 rounded-[2rem] font-black text-lg transition-all shadow-2xl hover:scale-105 active:scale-95 flex items-center justify-center gap-4 group">
+                                <span>Verify Knowledge</span>
+                                <svg class="w-6 h-6 text-brand-400 group-hover:translate-x-1 transition-transform"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </button>
+                            <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Requires 70% precision
+                                to auto-complete session</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Actions -->
+            <div
+                class="mt-20 flex flex-col sm:flex-row items-center justify-between gap-8 pt-12 border-t border-slate-100 mb-12">
+                <div class="flex items-center gap-4">
+                    {% if user.is_authenticated %}
+                    <button id="mark-complete-btn"
+                        class="h-16 px-10 rounded-[2rem] font-black transition-all flex items-center gap-3 shadow-xl hover:scale-105 active:scale-95 {% if is_completed %}bg-emerald-500 text-white cursor-default{% else %}bg-brand-900 text-white hover:bg-slate-800{% endif %}"
+                        {% if is_completed %}disabled{% endif %}>
+                        {% if is_completed %}
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        Validated
+                        {% else %}
+                        <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Complete Session
+                        {% endif %}
+                    </button>
+                    {% else %}
+                    <a href="{% url 'users:login' %}?next={{ request.path }}"
+                        class="h-16 px-10 flex items-center justify-center bg-brand-900 text-white rounded-[2rem] font-black transition-all shadow-xl hover:scale-105">
+                        Log Mission Data
+                    </a>
+                    {% endif %}
+                </div>
+
+                <div class="flex items-center gap-4">
+                    {% if prev_lesson %}
+                    <a href="{% if prev_lesson.content_type == 'assessment' %}{% url 'courses:assessment' prev_lesson.pk %}{% else %}{% url 'courses:lesson_detail' prev_lesson.pk %}{% endif %}"
+                        class="w-16 h-16 bg-white border-2 border-slate-100 rounded-3xl flex items-center justify-center text-slate-400 hover:text-brand-900 hover:border-brand-900 transition-all group">
+                        <svg class="w-6 h-6 group-hover:-translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                    </a>
+                    {% endif %}
+
+                    <div class="bg-slate-50 px-6 py-4 rounded-[1.5rem] font-black text-slate-800 text-sm">
+                        {{ lesson.order }} / {{ lesson.module.lessons.count }}
+                    </div>
+
+                    {% if next_lesson %}
+                    <a href="{% if next_lesson.content_type == 'assessment' %}{% url 'courses:assessment' next_lesson.pk %}{% else %}{% url 'courses:lesson_detail' next_lesson.pk %}{% endif %}"
+                        class="h-16 px-8 bg-brand-400 text-brand-900 rounded-[1.5rem] flex items-center justify-center font-black group hover:bg-brand-500 transition-all shadow-lg hover:scale-105">
+                        <span class="mr-4">Next Intel</span>
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                    {% else %}
+                    <a href="{% url 'courses:dashboard' %}"
+                        class="h-16 px-8 bg-emerald-500 text-white rounded-[1.5rem] flex items-center justify-center font-black transition-all shadow-lg hover:scale-105">
+                        HQ Dashboard
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- AI Tutor Sidebar -->
+<div id="ai-tutor-panel" class="fixed inset-y-0 right-0 w-full sm:w-96 bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-500 ease-in-out border-l border-slate-100 flex flex-col">
+    <div class="bg-brand-900 p-6 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-brand-400 rounded-xl flex items-center justify-center shadow-lg">
+                <svg class="w-6 h-6 text-brand-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+            </div>
+            <div>
+                <h3 class="text-white font-black tracking-tight leading-none">AI Study Buddy</h3>
+                <span class="text-brand-400/60 text-[0.6rem] font-black uppercase tracking-widest">Active Intelligence</span>
+            </div>
+        </div>
+        <button id="close-ai-tutor" class="text-white/50 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+    </div>
+    
+    <div class="flex-1 overflow-y-auto p-6 space-y-6" id="ai-chat-messages">
+        <!-- AI Welcome Message -->
+        <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-brand-400/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <div class="bg-slate-50 p-4 rounded-2xl rounded-tl-none border border-slate-100">
+                <p class="text-sm text-slate-700 font-bold leading-relaxed">
+                    Hello! I'm your AI Study Buddy. I've analyzed this lesson on <span class="text-brand-900">{{ lesson.title }}</span>. How can I help you today?
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <button class="ai-suggestion-btn text-[0.65rem] font-black uppercase tracking-widest bg-white border border-slate-200 px-3 py-2 rounded-lg hover:border-brand-400 transition-colors">Explain concepts</button>
+                    <button class="ai-suggestion-btn text-[0.65rem] font-black uppercase tracking-widest bg-white border border-slate-200 px-3 py-2 rounded-lg hover:border-brand-400 transition-colors">Quick summary</button>
+                    <button class="ai-suggestion-btn text-[0.65rem] font-black uppercase tracking-widest bg-white border border-slate-200 px-3 py-2 rounded-lg hover:border-brand-400 transition-colors">Real-world usage</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="p-6 border-t border-slate-100 bg-slate-50/50">
+        <form id="ai-chat-form" class="relative">
+            <input type="text" id="ai-chat-input" placeholder="Ask me anything about this lesson..." class="w-full bg-white border-2 border-slate-100 rounded-2xl py-4 pl-6 pr-14 font-bold text-sm focus:border-brand-400 outline-none transition-all placeholder:text-slate-300">
+            <button type="submit" class="absolute right-3 top-3 w-10 h-10 bg-brand-900 text-brand-400 rounded-xl flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-lg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Sidebar Drawer Logic
+        const sidebar = document.getElementById('course-sidebar');
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.remove('-translate-x-full');
+                sidebarBackdrop.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            });
+        }
+
+        if (sidebarBackdrop) {
+            sidebarBackdrop.addEventListener('click', () => {
+                sidebar.classList.add('-translate-x-full');
+                sidebarBackdrop.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            });
+        }
+
+        // AI Tutor Sidebar Logic
+        const tutorPanel = document.getElementById('ai-tutor-panel');
+        const tutorTrigger = document.getElementById('ai-tutor-trigger');
+        const closeTutor = document.getElementById('close-ai-tutor');
+        const chatForm = document.getElementById('ai-chat-form');
+        const chatInput = document.getElementById('ai-chat-input');
+        const chatMessages = document.getElementById('ai-chat-messages');
+
+        tutorTrigger.addEventListener('click', () => {
+            tutorPanel.classList.remove('translate-x-full');
+        });
+
+        closeTutor.addEventListener('click', () => {
+            tutorPanel.classList.add('translate-x-full');
+        });
+
+        const addMessage = (text, isUser = false) => {
+            const div = document.createElement('div');
+            div.className = `flex items-start gap-3 ${isUser ? 'flex-row-reverse' : ''}`;
+            div.innerHTML = `
+                <div class="w-8 h-8 rounded-lg ${isUser ? 'bg-brand-900' : 'bg-brand-400/20'} flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 ${isUser ? 'text-white' : 'text-brand-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        ${isUser ? '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>' : '<path d="M13 10V3L4 14h7v7l9-11h-7z"></path>'}
+                    </svg>
+                </div>
+                <div class="${isUser ? 'bg-brand-900 text-white rounded-tr-none' : 'bg-slate-50 text-slate-700 rounded-tl-none border border-slate-100'} p-4 rounded-2xl">
+                    <p class="text-sm font-bold leading-relaxed message-content"></p>
+                </div>
+            `;
+            div.querySelector('.message-content').textContent = text;
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const text = chatInput.value.trim();
+            if (!text) return;
+            
+            addMessage(text, true);
+            chatInput.value = '';
+            
+            // Fetch AI Response from Backend
+            fetch('{% url "courses:ai_tutor" lesson.pk %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: JSON.stringify({ query: text })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    addMessage(data.response);
+                } else {
+                    addMessage(data.error || "I'm sorry, I'm having trouble connecting to my brain right now. Please try again later.");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                addMessage("Connection error. Please check your network.");
+            });
+        });
+
+        document.querySelectorAll('.ai-suggestion-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                chatInput.value = btn.innerText;
+                chatForm.dispatchEvent(new Event('submit'));
+            });
+        });
+
+        // Initialize Daily Quiz
+        const dailyQuizData = {{ daily_quiz_json|safe }};
+        if (dailyQuizData) {
+            new QuizHandler({
+                questions: dailyQuizData,
+                submitUrl: '{% url "courses:submit_quiz" lesson.pk %}',
+                csrfToken: '{{ csrf_token }}',
+                isAssessment: false
+            });
+        }
+
+        const markCompleteBtn = document.getElementById('mark-complete-btn');
+        if (markCompleteBtn && !markCompleteBtn.disabled) {
+            markCompleteBtn.addEventListener('click', function () {
+                fetch('{% url "courses:mark_complete" lesson.pk %}', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        markCompleteBtn.innerHTML = `
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Validated
+                        `;
+                        markCompleteBtn.classList.remove('bg-brand-900', 'hover:bg-slate-800');
+                        markCompleteBtn.classList.add('bg-emerald-500', 'cursor-default');
+                        markCompleteBtn.disabled = true;
+                    }
+                })
+                .catch(error => { console.error('Error:', error); });
+            });
+        }
+    });
+</script>
+{% endblock %}
